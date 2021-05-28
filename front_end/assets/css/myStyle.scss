@@ -100,7 +100,10 @@ nav {
     }
   }
 }
-
+.flexH {
+  display: flex;
+  flex-direction: column;
+}
 .menuToggle {
   display: none;
 }

@@ -19,13 +19,13 @@
         </div>
         <div class="advancedBlock">
             <div class="searchOptions">
-                <div>
+                <div class="flexH">
                     <div> Type</div>
                     <select id="types" class="colorPicker">
 
                     </select>
                 </div>
-                <div>
+                <div class="flexH">
                     <div>Color</div>
                     <select id="colors" class="colorPicker">
 

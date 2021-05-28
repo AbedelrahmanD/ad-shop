@@ -6,7 +6,7 @@
   -webkit-clip-path: polygon(50% 0%, 100% 0, 100% 43%, 100% 100%, 83% 83%, 17% 83%, 0 100%, 0% 43%, 0 0);
           clip-path: polygon(50% 0%, 100% 0, 100% 43%, 100% 100%, 83% 83%, 17% 83%, 0 100%, 0% 43%, 0 0);
   z-index: 2;
-  background-color: #211d1f;
+  background-color: #e5005a;
   height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -55,7 +55,7 @@
 }
 
 .searchContainer input:focus {
-  color: #211d1f;
+  color: #e5005a;
   -webkit-box-shadow: 1px 1px 5px white;
           box-shadow: 1px 1px 5px white;
 }
@@ -75,13 +75,13 @@
 }
 
 .searchContainer button .material-icons {
-  color: #211d1f;
+  color: #e5005a;
 }
 
 .searchContainer button:hover {
   -webkit-box-shadow: 1px 1px 5px black;
           box-shadow: 1px 1px 5px black;
-  background-color: #211d1f;
+  background-color: #e5005a;
 }
 
 .searchContainer button:hover .material-icons {
