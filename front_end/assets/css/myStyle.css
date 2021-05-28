@@ -18,6 +18,10 @@ body {
   position: relative;
 }
 
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
 .bodyMain {
   overflow: hidden;
   padding-bottom: 10px;
