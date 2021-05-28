@@ -41,7 +41,7 @@
         </div>
         <div class="productReviewDetails">
             <h3>product name</h3>
-            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam praesentium magnam sequi magni cumque nam sed soluta saepe expedita quod.</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam praesentium magnam sequi magni cumque nam sed soluta saepe expedita quod.</p>
             <h3>70$</h3>
         </div>
         <span class="material-icons">
@@ -53,7 +53,7 @@
     <a href="product_info.php?product=1" class="productReview flexReverse" data-aos="fade-left" data-aos-duration="1500">
         <div class="productReviewDetails">
             <h3>product name</h3>
-            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam praesentium magnam sequi magni cumque nam sed soluta saepe expedita quod.</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam praesentium magnam sequi magni cumque nam sed soluta saepe expedita quod.</p>
             <h3>70$</h3>
         </div>
         <div class="productReviewImageContainer">
@@ -73,7 +73,7 @@
         </div>
         <div class="productReviewDetails">
             <h3>product name</h3>
-            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam praesentium magnam sequi magni cumque nam sed soluta saepe expedita quod.</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam praesentium magnam sequi magni cumque nam sed soluta saepe expedita quod.</p>
             <h3>70$</h3>
             <span class="material-icons">
                 mood

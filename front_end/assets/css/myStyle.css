@@ -22,6 +22,10 @@ body {
   -webkit-tap-highlight-color: transparent;
 }
 
+p {
+  line-height: 1.5;
+}
+
 .bodyMain {
   overflow: hidden;
   padding-bottom: 10px;

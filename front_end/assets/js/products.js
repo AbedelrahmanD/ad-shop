@@ -26,8 +26,7 @@ $(function () {
     var selectedType = $("#types").val();
     var selectedColor = $("#colors").val();
     if (selectedType != 0) obj.productType = selectedType;
-    if (selectedColor != 0);
-    obj.productColor = selectedColor;
+    if (selectedColor != 0) obj.productColor = selectedColor;
     getData(obj, "targetList");
   });
 
