@@ -91,16 +91,18 @@ function getData(obj, targetElementClass) {
 
 $(function () {
   calculateFooterHeight();
-
   window.onresize = () => {
     calculateFooterHeight();
   };
+
   $(".toastContainer").click(function () {
     $(this).css({ transform: "translateY(99px)" });
   });
+
   $("#serviceUrl").keydown(function () {
     return false;
   });
+
   $("#copy").click(function () {
     /* Get the text field */
     var copyText = document.getElementById("serviceUrl");
@@ -111,25 +113,28 @@ $(function () {
     /* Copy the text inside the text field */
     document.execCommand("copy");
   });
+
   $(".plusNumber").click(function () {
     var currentValue = parseFloat($(".quantityNumber").text());
     currentValue = currentValue + 1;
     $(".quantityNumber").text(currentValue);
   });
+
   $(".minusNumber").click(function () {
     var currentValue = parseFloat($(".quantityNumber").text());
     if (currentValue > 1) currentValue = parseFloat(currentValue) - 1;
     $(".quantityNumber").text(currentValue);
   });
+
   $(".goTop").click(function () {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
   });
   window.onscroll = () => {
     if (window.scrollY > 0) {
-      document.querySelector("#goTop").style.display = "block";
+      $("#goTop").fadeIn();
     } else {
-      document.querySelector("#goTop").style.display = "none";
+      $("#goTop").fadeOut();
     }
   };
   $(".goBack").click(function () {
@@ -138,12 +143,12 @@ $(function () {
   var toggle = 1;
   $(".menuToggle").click(function () {
     if (toggle == 1) {
-      document.querySelector("nav ul").className = "showMenu";
+      $("nav ul").addClass("showMenu");
       $("#menuOpen").hide();
       $("#menuClose").show();
       toggle = 0;
     } else {
-      document.querySelector("nav ul").className = "";
+      $("nav ul").removeClass("showMenu");
       $("#menuOpen").show();
       $("#menuClose").hide();
       toggle = 1;
