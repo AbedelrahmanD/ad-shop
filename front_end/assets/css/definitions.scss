@@ -1,0 +1,11 @@
+$primary: #e5005a;
+$secondary: white;
+$textColor: black;
+
+@mixin limitWidth {
+  max-width: 1140px;
+  margin: auto;
+}
+@mixin sectionMargin {
+  margin-top: 150px;
+}

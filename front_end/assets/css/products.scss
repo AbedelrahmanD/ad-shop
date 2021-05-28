@@ -1,0 +1,101 @@
+@import "definitions";
+.productsSection {
+  @include sectionMargin;
+  .coverImage {
+    clip-path: polygon(
+      50% 0%,
+      100% 0,
+      100% 43%,
+      100% 100%,
+      83% 83%,
+      17% 83%,
+      0 100%,
+      0% 43%,
+      0 0
+    );
+    z-index: 2;
+    background-color: $primary;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 1rem;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+}
+.searchContainer {
+  max-width: 1140px;
+  display: flex;
+  justify-content: center;
+  height: 50px;
+  width: 70%;
+  input {
+    height: 100%;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding: 0px 1rem;
+    margin: 0px;
+    border: none;
+    outline: none;
+    transition: all 1s;
+    font-size: 1.2rem;
+    font-weight: bold;
+    width: 50%;
+    min-width: 250px;
+    &:focus {
+      color: $primary;
+      box-shadow: 1px 1px 5px $secondary;
+    }
+  }
+  button {
+    height: 100%;
+    outline: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: $secondary;
+    border: none;
+    cursor: pointer;
+    transition: all 1s;
+    width: 10%;
+    min-width: 50px;
+    .material-icons {
+      color: $primary;
+    }
+    &:hover {
+      box-shadow: 1px 1px 5px $textColor;
+      background-color: $primary;
+      .material-icons {
+        color: $secondary;
+      }
+    }
+  }
+}
+.searchOptions {
+  display: flex;
+  background-color: white;
+  box-shadow: 1px 1px 5px grey;
+  border-radius: 5px;
+  padding: 15px;
+  justify-content: space-around;
+}
+.advancedSearch {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.advancedBlock {
+  display: none;
+  width: 300px;
+}
+.targetList {
+  @include limitWidth;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 280px));
+  gap: 5rem;
+  justify-content: center;
+  margin: auto;
+
+  margin-top: -60vh;
+  z-index: 10;
+}

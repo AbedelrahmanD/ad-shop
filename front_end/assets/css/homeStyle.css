@@ -1,0 +1,224 @@
+#slider {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  background-color: #e5005a;
+  height: 100vh;
+  width: 100%;
+  background-size: contain;
+  background-position-y: top;
+  background-repeat: no-repeat;
+  border-bottom-right-radius: 500px;
+}
+
+.shopImage {
+  width: 40%;
+}
+
+.shopImage img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.sliderContents {
+  position: relative;
+  z-index: 6;
+  width: 60%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 2rem;
+}
+
+.textSlider p,
+.textSlider h1 {
+  color: white;
+}
+
+.textSlider h1 {
+  font-size: 3rem;
+}
+
+.textSlider p {
+  max-width: 300px;
+}
+
+.sliderBtns {
+  width: 200px;
+}
+
+.sliderBtns a {
+  display: inline-block;
+  text-align: center;
+  padding: 15px;
+  font-weight: bold;
+  font-size: 20px;
+  min-width: 200px;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+
+.productReview {
+  max-width: 1140px;
+  margin: auto;
+  cursor: pointer;
+  margin: 2rem auto;
+  border-radius: 5px;
+  -webkit-box-shadow: 1px 1px 5px grey;
+          box-shadow: 1px 1px 5px grey;
+  background-color: white;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  position: relative;
+  overflow: hidden;
+}
+
+.productReview:hover {
+  -webkit-box-shadow: 1px 1px 20px grey;
+          box-shadow: 1px 1px 20px grey;
+}
+
+.productReview .material-icons {
+  position: absolute;
+  bottom: 1px;
+  right: 1px;
+  background-color: #e5005a;
+  color: white;
+  border-radius: 100px;
+}
+
+.productReviewImageContainer {
+  width: 40%;
+  height: 300px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.productReviewImageContainer img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+
+.productReviewDetails {
+  padding-left: 2rem;
+}
+
+.productReviewDetails h3 {
+  padding: 2px;
+}
+
+.productReviewDetails h3:first-of-type {
+  border-left: 5px solid #e5005a;
+  font-weight: bold;
+}
+
+.productReviewDetails h3:nth-last-child(1) {
+  color: #e5005a;
+  font-weight: bold;
+}
+
+.join {
+  background-color: #e5005a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5rem 1rem;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.join h3 {
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 3rem;
+}
+
+.categoryBigSection {
+  max-width: 1140px;
+  margin: auto;
+}
+
+.viewSection {
+  margin: 2rem auto;
+  background-color: white;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.viewSection:hover {
+  -webkit-box-shadow: 1px 1px 5px grey;
+          box-shadow: 1px 1px 5px grey;
+}
+
+.titleWraper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.titleWraper h1 {
+  border-bottom: 3px solid #e5005a;
+  margin-bottom: 2rem;
+}
+
+#discounts .mainBlock span:first-of-type {
+  text-decoration: line-through;
+}
+
+@media screen and (max-width: 768px) {
+  .shopImage {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .productReviewImageContainer {
+    width: 100%;
+  }
+  .sliderContents {
+    width: 100%;
+  }
+  .sliderContents h1 {
+    font-size: 2rem;
+  }
+  .join h3 {
+    font-size: 2rem;
+  }
+  .product_slider_carousel {
+    overflow: auto;
+  }
+}

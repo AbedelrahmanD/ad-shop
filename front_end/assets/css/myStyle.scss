@@ -1,0 +1,614 @@
+@import "definitions";
+::selection {
+  color: #3f3d56;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Open Sans";
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  position: relative;
+}
+.bodyMain {
+  overflow: hidden;
+  padding-bottom: 10px;
+}
+#cartNumber {
+  color: $primary;
+}
+#loadingScreen {
+  position: fixed;
+  background-color: $secondary;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 70%;
+      height: 70%;
+      object-fit: contain;
+    }
+  }
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+nav {
+  box-shadow: 1px 1px 5px gray;
+  max-width: 1340px;
+  margin: auto;
+  margin-top: auto;
+  border-radius: 100px;
+  margin-top: 5px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  color: $secondary;
+  background-color: $secondary;
+  z-index: 500;
+  ul {
+    display: flex;
+    li {
+      list-style: none;
+      padding: 10px;
+      font-weight: bold;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.5s;
+      a {
+        color: $primary;
+        position: relative;
+        z-index: 1;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 90%;
+          left: 0;
+          width: 0px;
+          bottom: 0;
+          z-index: -1;
+          transition: all 0.5s;
+        }
+        &:hover {
+          &::before {
+            background-color: $primary;
+            right: 0;
+            width: 100%;
+          }
+        }
+      }
+      .material-icons {
+        color: $primary;
+      }
+    }
+  }
+}
+
+.menuToggle {
+  display: none;
+}
+#login {
+  min-width: 100px;
+}
+.material-icons {
+  &:hover {
+    cursor: pointer;
+  }
+}
+#brandDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-left: 2rem;
+  font-size: 2rem;
+  span {
+    color: $primary;
+    font-weight: bold;
+  }
+}
+
+.overLay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  opacity: 0.5;
+  display: flex;
+  justify-content: center;
+  z-index: 5;
+}
+.sliderBtns {
+  display: flex;
+  justify-content: center;
+  a {
+    border: 0px;
+    box-shadow: 1px 1px 5px grey;
+    border-radius: 100px;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      top: 0;
+      border-radius: 100px;
+      width: 0px;
+      z-index: -1;
+      transition: all 0.5s;
+    }
+    &:hover {
+      &::before {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+.btn1 {
+  background-color: $primary;
+  color: $secondary;
+  &:hover {
+    color: black;
+    &::before {
+      background-color: $secondary;
+      right: 0;
+    }
+  }
+}
+.btn2 {
+  color: black;
+  background-color: $secondary;
+  &:hover {
+    color: rgb(255, 255, 255);
+    &::before {
+      background-color: $primary;
+      right: 0;
+    }
+  }
+}
+
+.carouselSection {
+  position: relative;
+  transition: all 1s;
+  border-radius: 5px;
+  padding: 1rem;
+  .sliderBtns {
+    width: 100%;
+    margin-top: 1rem;
+  }
+}
+.carouselArrow {
+  cursor: pointer;
+  z-index: 3;
+  position: absolute;
+  top: 40%;
+  border: 0px;
+  border-radius: 100px;
+  width: 50px;
+  height: 50px;
+  padding: 15px;
+  background-color: $secondary;
+  box-shadow: 1px 1px 5px grey;
+  font-weight: bold;
+  color: black;
+  &:focus {
+    opacity: 1;
+    background-color: $primary;
+    box-shadow: 1px 1px 5px $secondary;
+    color: $secondary;
+  }
+}
+.carouselNextArrow {
+  right: 1px;
+}
+.carouselPrevArrow {
+  left: 1px;
+}
+.product_slider_carousel {
+  display: flex;
+  gap: 3rem;
+  overflow: hidden;
+  padding: 50px;
+}
+
+.productContainer {
+  flex-shrink: 0;
+  background-color: $secondary;
+  cursor: pointer;
+  width: 280px;
+  height: 300px;
+  box-shadow: 1px 1px 5px grey;
+  position: relative;
+  border-radius: 5px;
+  transition: all 1s;
+  .material-icons {
+    color: $primary;
+    transition: all 2s;
+    opacity: 0;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: $secondary;
+    border-radius: 100px;
+    padding: 5px;
+  }
+  &:hover {
+    box-shadow: 1px 1px 15px $primary;
+    .productImageContainer {
+      top: 0px;
+      left: 0px;
+      box-shadow: 1px 1px 5px grey;
+      width: 280px;
+    }
+    .material-icons {
+      opacity: 1;
+    }
+  }
+}
+.productImageContainer {
+  background-color: $secondary;
+  transition: all 0.5s cubic-bezier(0.25, 0.1, 0.59, 1.54);
+  position: absolute;
+  border-radius: 5px;
+  box-shadow: 1px 1px 12px grey;
+  top: -7px;
+  left: -10px;
+  right: 0px;
+  bottom: 50%;
+  width: 300px;
+  height: 200px;
+  img {
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+.productTextContainer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  top: 70%;
+  overflow: hidden;
+  padding: 3px;
+  span,
+  p {
+    font-weight: bold;
+  }
+  span {
+    color: $primary;
+  }
+  p {
+    color: black;
+  }
+}
+
+.stroke {
+  text-decoration: line-through;
+}
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: $primary;
+  width: 100%;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h3 {
+    color: $secondary;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.5s;
+    &:hover {
+      color: $primary;
+    }
+  }
+}
+.footerImagesContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footerImages {
+  cursor: pointer;
+  transition: all 1s;
+  &:hover {
+    transform: scale(0.9);
+  }
+}
+.goTop {
+  display: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  padding: 20px;
+  background-color: $secondary;
+  box-shadow: 1px 1px 5px grey;
+  color: $primary;
+  position: fixed;
+  bottom: 2%;
+  right: 2%;
+  z-index: 500;
+  cursor: pointer;
+  .material-icons {
+    font-size: 50px;
+    position: absolute;
+    top: 10%;
+    left: 10%;
+  }
+}
+.dropDown {
+  position: relative;
+  &:hover {
+    .dropDownOption {
+      opacity: 1;
+      height: auto;
+      z-index: 5;
+    }
+  }
+}
+.dropDownOption {
+  position: absolute;
+  right: -40%;
+  width: 150px;
+  color: $primary;
+  display: flex;
+  flex-direction: column;
+  background-color: $secondary;
+  height: 0px;
+  overflow: hidden;
+  opacity: 0;
+  box-shadow: 1px 1px 5px gray;
+  border-radius: 7px;
+  transition: all 0.5s;
+  span {
+    display: block;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    &:hover {
+      color: $secondary;
+      background-color: $primary;
+      .material-icons {
+        color: $secondary;
+      }
+    }
+  }
+  a {
+    padding-top: 5px;
+    width: 100%;
+    color: $primary;
+  }
+}
+.dropDownTitle {
+  cursor: pointer;
+  &::after {
+    content: "\25BD";
+  }
+}
+.flexDiv {
+  display: flex;
+  align-items: center;
+}
+.flexDivH {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.modalContainerBlock {
+  display: none;
+}
+.modalView {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.534);
+  z-index: 500;
+  top: 0%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .modalViewImageContainer {
+    position: relative;
+    height: 500px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  .modalViewClose {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 100px;
+    background-color: black;
+    opacity: 0.5;
+    width: 50px;
+    height: 50px;
+    color: $secondary;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    cursor: pointer;
+  }
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+.customInputNumber {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .quantityNumber {
+    width: 20px;
+    text-align: center;
+  }
+  .numberAction {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    border-radius: 100px;
+    box-shadow: 1px 1px 5px grey;
+    font-weight: bold;
+    &:hover {
+      box-shadow: 1px 1px 10px $primary;
+    }
+  }
+}
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: transparent;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+  background-repeat: no-repeat;
+  background-position-x: 100%;
+  background-position-y: 12px;
+  min-width: 70px;
+}
+
+.colorPicker {
+  padding: 1rem;
+  border: none;
+  box-shadow: 1px 1px 5px gray;
+  option {
+    color: $primary;
+    padding: 1rem;
+    font-weight: bold;
+    &:hover {
+      color: $secondary;
+      background-color: $primary;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .product_slider_carousel {
+    overflow: auto;
+  }
+  .menuToggle {
+    display: block;
+    cursor: pointer;
+    position: fixed;
+    top: 1%;
+    right: 5%;
+    font-size: 50px;
+    color: $primary;
+    transition: all 1s;
+  }
+  nav {
+    max-width: unset;
+    margin: unset;
+    border-radius: 0px;
+
+    ul {
+      height: 100vh;
+      overflow: hidden;
+      position: absolute;
+      top: 50px;
+      background-color: $primary;
+      width: 100%;
+      left: 0;
+      right: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      transition: all 1s;
+      transform: translateX(800px);
+      li {
+        a {
+          color: $secondary;
+        }
+      }
+    }
+  }
+  .showMenu {
+    transform: translateX(0px);
+  }
+  #footer {
+    margin-top: 30%;
+  }
+  .txtSlider {
+    display: flex;
+    flex-direction: column;
+    .btnBlock {
+      width: 90%;
+    }
+  }
+  .textSlider {
+    h1 {
+      font-size: 3rem;
+    }
+  }
+}
+.toastContainer {
+  transform: translateY(99px);
+  cursor: pointer;
+  transition: all 1s cubic-bezier(0.21, -0.4, 0.44, 1.58);
+  position: fixed;
+  bottom: 5px;
+  width: 100%;
+  box-shadow: 1px 1px 5px grey;
+  z-index: 50;
+}
+.Toast {
+  background-color: $primary;
+  font-weight: bold;
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+  padding: 15px;
+  width: 100%;
+}
+
+@media screen and (max-width: 500px) {
+  #cartIcon,
+  #cartNumber {
+    color: $secondary;
+  }
+  .productReviewImageContainer {
+    width: 100%;
+  }
+  .productReview {
+    flex-direction: column;
+    width: 85%;
+    margin: auto;
+  }
+  .flexReverse {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}

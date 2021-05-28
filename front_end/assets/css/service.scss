@@ -1,0 +1,115 @@
+@import "definitions";
+@mixin code {
+  background-color: $primary;
+  box-shadow: 1px 1px 5px grey;
+  padding: 15px;
+  border-radius: 5px;
+  color: white;
+  font-size: 1rem;
+}
+.service {
+  @include limitWidth;
+  @include sectionMargin;
+  padding: 10px;
+  h1 {
+    border-left: 3px solid $primary;
+    padding: 0px 5px;
+    font-size: 2rem;
+  }
+}
+.welcomImage {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  img {
+    width: 70%;
+    min-width: 280px;
+  }
+}
+
+.urlPath {
+  .clip {
+    display: flex;
+    justify-content: space-between;
+    @include code;
+    input {
+      border: none;
+      outline: none;
+      background-color: transparent;
+      color: $secondary;
+      width: 100%;
+    }
+  }
+}
+.ourService {
+  box-shadow: 1px 1px 5px grey;
+  border-radius: 5px;
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .imageContainer {
+    width: 50%;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  .textContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    h2 {
+      font-size: 2rem;
+      border-bottom: 3px solid $primary;
+      max-width: 200px;
+    }
+    p {
+      font-size: 1rem;
+      line-height: 1.7rem;
+      padding: 10px;
+    }
+  }
+}
+.demo {
+  margin-top: 1rem;
+  .searchContainer {
+    justify-content: flex-start;
+  }
+}
+.searchOptionsContainer {
+  display: flex;
+  align-items: center;
+}
+.service {
+  table {
+    border-collapse: collapse;
+    td,
+    th {
+      padding: 15px;
+    }
+  }
+}
+.resulrContainer {
+  @include code;
+  overflow-x: auto;
+}
+
+@media screen and (max-width: 500px) {
+  .searchOptionsContainer {
+    flex-direction: column;
+  }
+  .ourService {
+    flex-direction: column;
+
+    .textContainer,
+    .imageContainer {
+      width: 100%;
+    }
+  }
+}

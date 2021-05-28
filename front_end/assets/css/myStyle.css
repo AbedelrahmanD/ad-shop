@@ -1,0 +1,831 @@
+::-moz-selection {
+  color: #3f3d56;
+}
+
+::selection {
+  color: #3f3d56;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Open Sans";
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  position: relative;
+}
+
+.bodyMain {
+  overflow: hidden;
+  padding-bottom: 10px;
+}
+
+#cartNumber {
+  color: #e5005a;
+}
+
+#loadingScreen {
+  position: fixed;
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+}
+
+#loadingScreen div {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#loadingScreen div img {
+  width: 70%;
+  height: 70%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+nav {
+  -webkit-box-shadow: 1px 1px 5px gray;
+          box-shadow: 1px 1px 5px gray;
+  max-width: 1340px;
+  margin: auto;
+  margin-top: auto;
+  border-radius: 100px;
+  margin-top: 5px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: white;
+  background-color: white;
+  z-index: 500;
+}
+
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+nav ul li {
+  list-style: none;
+  padding: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+nav ul li a {
+  color: #e5005a;
+  position: relative;
+  z-index: 1;
+}
+
+nav ul li a::before {
+  content: "";
+  position: absolute;
+  top: 90%;
+  left: 0;
+  width: 0px;
+  bottom: 0;
+  z-index: -1;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+nav ul li a:hover::before {
+  background-color: #e5005a;
+  right: 0;
+  width: 100%;
+}
+
+nav ul li .material-icons {
+  color: #e5005a;
+}
+
+.menuToggle {
+  display: none;
+}
+
+#login {
+  min-width: 100px;
+}
+
+.material-icons:hover {
+  cursor: pointer;
+}
+
+#brandDiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-left: 2rem;
+  font-size: 2rem;
+}
+
+#brandDiv span {
+  color: #e5005a;
+  font-weight: bold;
+}
+
+.overLay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  opacity: 0.5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 5;
+}
+
+.sliderBtns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.sliderBtns a {
+  border: 0px;
+  -webkit-box-shadow: 1px 1px 5px grey;
+          box-shadow: 1px 1px 5px grey;
+  border-radius: 100px;
+}
+
+.sliderBtns a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  border-radius: 100px;
+  width: 0px;
+  z-index: -1;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.sliderBtns a:hover::before {
+  width: 100%;
+  height: 100%;
+}
+
+.btn1 {
+  background-color: #e5005a;
+  color: white;
+}
+
+.btn1:hover {
+  color: black;
+}
+
+.btn1:hover::before {
+  background-color: white;
+  right: 0;
+}
+
+.btn2 {
+  color: black;
+  background-color: white;
+}
+
+.btn2:hover {
+  color: white;
+}
+
+.btn2:hover::before {
+  background-color: #e5005a;
+  right: 0;
+}
+
+.carouselSection {
+  position: relative;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  border-radius: 5px;
+  padding: 1rem;
+}
+
+.carouselSection .sliderBtns {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.carouselArrow {
+  cursor: pointer;
+  z-index: 3;
+  position: absolute;
+  top: 40%;
+  border: 0px;
+  border-radius: 100px;
+  width: 50px;
+  height: 50px;
+  padding: 15px;
+  background-color: white;
+  -webkit-box-shadow: 1px 1px 5px grey;
+          box-shadow: 1px 1px 5px grey;
+  font-weight: bold;
+  color: black;
+}
+
+.carouselArrow:focus {
+  opacity: 1;
+  background-color: #e5005a;
+  -webkit-box-shadow: 1px 1px 5px white;
+          box-shadow: 1px 1px 5px white;
+  color: white;
+}
+
+.carouselNextArrow {
+  right: 1px;
+}
+
+.carouselPrevArrow {
+  left: 1px;
+}
+
+.product_slider_carousel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 3rem;
+  overflow: hidden;
+  padding: 50px;
+}
+
+.productContainer {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  background-color: white;
+  cursor: pointer;
+  width: 280px;
+  height: 300px;
+  -webkit-box-shadow: 1px 1px 5px grey;
+          box-shadow: 1px 1px 5px grey;
+  position: relative;
+  border-radius: 5px;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.productContainer .material-icons {
+  color: #e5005a;
+  -webkit-transition: all 2s;
+  transition: all 2s;
+  opacity: 0;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: white;
+  border-radius: 100px;
+  padding: 5px;
+}
+
+.productContainer:hover {
+  -webkit-box-shadow: 1px 1px 15px #e5005a;
+          box-shadow: 1px 1px 15px #e5005a;
+}
+
+.productContainer:hover .productImageContainer {
+  top: 0px;
+  left: 0px;
+  -webkit-box-shadow: 1px 1px 5px grey;
+          box-shadow: 1px 1px 5px grey;
+  width: 280px;
+}
+
+.productContainer:hover .material-icons {
+  opacity: 1;
+}
+
+.productImageContainer {
+  background-color: white;
+  -webkit-transition: all 0.5s cubic-bezier(0.25, 0.1, 0.59, 1.54);
+  transition: all 0.5s cubic-bezier(0.25, 0.1, 0.59, 1.54);
+  position: absolute;
+  border-radius: 5px;
+  -webkit-box-shadow: 1px 1px 12px grey;
+          box-shadow: 1px 1px 12px grey;
+  top: -7px;
+  left: -10px;
+  right: 0px;
+  bottom: 50%;
+  width: 300px;
+  height: 200px;
+}
+
+.productImageContainer img {
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.productTextContainer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  top: 70%;
+  overflow: hidden;
+  padding: 3px;
+}
+
+.productTextContainer span,
+.productTextContainer p {
+  font-weight: bold;
+}
+
+.productTextContainer span {
+  color: #e5005a;
+}
+
+.productTextContainer p {
+  color: black;
+}
+
+.stroke {
+  text-decoration: line-through;
+}
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #e5005a;
+  width: 100%;
+  height: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#footer h3 {
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+#footer h3:hover {
+  color: #e5005a;
+}
+
+.footerImagesContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footerImages {
+  cursor: pointer;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.footerImages:hover {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+.goTop {
+  display: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  padding: 20px;
+  background-color: white;
+  -webkit-box-shadow: 1px 1px 5px grey;
+          box-shadow: 1px 1px 5px grey;
+  color: #e5005a;
+  position: fixed;
+  bottom: 2%;
+  right: 2%;
+  z-index: 500;
+  cursor: pointer;
+}
+
+.goTop .material-icons {
+  font-size: 50px;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+}
+
+.dropDown {
+  position: relative;
+}
+
+.dropDown:hover .dropDownOption {
+  opacity: 1;
+  height: auto;
+  z-index: 5;
+}
+
+.dropDownOption {
+  position: absolute;
+  right: -40%;
+  width: 150px;
+  color: #e5005a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: white;
+  height: 0px;
+  overflow: hidden;
+  opacity: 0;
+  -webkit-box-shadow: 1px 1px 5px gray;
+          box-shadow: 1px 1px 5px gray;
+  border-radius: 7px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.dropDownOption span {
+  display: block;
+  padding: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.dropDownOption span:hover {
+  color: white;
+  background-color: #e5005a;
+}
+
+.dropDownOption span:hover .material-icons {
+  color: white;
+}
+
+.dropDownOption a {
+  padding-top: 5px;
+  width: 100%;
+  color: #e5005a;
+}
+
+.dropDownTitle {
+  cursor: pointer;
+}
+
+.dropDownTitle::after {
+  content: "\25BD";
+}
+
+.flexDiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.flexDivH {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.modalContainerBlock {
+  display: none;
+}
+
+.modalView {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.534);
+  z-index: 500;
+  top: 0%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modalView .modalViewImageContainer {
+  position: relative;
+  height: 500px;
+}
+
+.modalView .modalViewImageContainer img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.modalView .modalViewClose {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 100px;
+  background-color: black;
+  opacity: 0.5;
+  width: 50px;
+  height: 50px;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0;
+  cursor: pointer;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.customInputNumber {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.customInputNumber .quantityNumber {
+  width: 20px;
+  text-align: center;
+}
+
+.customInputNumber .numberAction {
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0px;
+  border-radius: 100px;
+  -webkit-box-shadow: 1px 1px 5px grey;
+          box-shadow: 1px 1px 5px grey;
+  font-weight: bold;
+}
+
+.customInputNumber .numberAction:hover {
+  -webkit-box-shadow: 1px 1px 10px #e5005a;
+          box-shadow: 1px 1px 10px #e5005a;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: transparent;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+  background-repeat: no-repeat;
+  background-position-x: 100%;
+  background-position-y: 12px;
+  min-width: 70px;
+}
+
+.colorPicker {
+  padding: 1rem;
+  border: none;
+  -webkit-box-shadow: 1px 1px 5px gray;
+          box-shadow: 1px 1px 5px gray;
+}
+
+.colorPicker option {
+  color: #e5005a;
+  padding: 1rem;
+  font-weight: bold;
+}
+
+.colorPicker option:hover {
+  color: white;
+  background-color: #e5005a;
+}
+
+@media screen and (max-width: 768px) {
+  .product_slider_carousel {
+    overflow: auto;
+  }
+  .menuToggle {
+    display: block;
+    cursor: pointer;
+    position: fixed;
+    top: 1%;
+    right: 5%;
+    font-size: 50px;
+    color: #e5005a;
+    -webkit-transition: all 1s;
+    transition: all 1s;
+  }
+  nav {
+    max-width: unset;
+    margin: unset;
+    border-radius: 0px;
+  }
+  nav ul {
+    height: 100vh;
+    overflow: hidden;
+    position: absolute;
+    top: 50px;
+    background-color: #e5005a;
+    width: 100%;
+    left: 0;
+    right: 0;
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-transition: all 1s;
+    transition: all 1s;
+    -webkit-transform: translateX(800px);
+            transform: translateX(800px);
+  }
+  nav ul li a {
+    color: white;
+  }
+  .showMenu {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  #footer {
+    margin-top: 30%;
+  }
+  .txtSlider {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .txtSlider .btnBlock {
+    width: 90%;
+  }
+  .textSlider h1 {
+    font-size: 3rem;
+  }
+}
+
+.toastContainer {
+  -webkit-transform: translateY(99px);
+          transform: translateY(99px);
+  cursor: pointer;
+  -webkit-transition: all 1s cubic-bezier(0.21, -0.4, 0.44, 1.58);
+  transition: all 1s cubic-bezier(0.21, -0.4, 0.44, 1.58);
+  position: fixed;
+  bottom: 5px;
+  width: 100%;
+  -webkit-box-shadow: 1px 1px 5px grey;
+          box-shadow: 1px 1px 5px grey;
+  z-index: 50;
+}
+
+.Toast {
+  background-color: #e5005a;
+  font-weight: bold;
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+  padding: 15px;
+  width: 100%;
+}
+
+@media screen and (max-width: 500px) {
+  #cartIcon,
+  #cartNumber {
+    color: white;
+  }
+  .productReviewImageContainer {
+    width: 100%;
+  }
+  .productReview {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 85%;
+    margin: auto;
+  }
+  .flexReverse {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+}
