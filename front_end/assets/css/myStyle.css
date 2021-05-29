@@ -140,7 +140,10 @@ nav ul li a:hover::before {
   width: 100%;
 }
 
-nav ul li .material-icons {
+nav ul li .material-icons,
+nav ul li .fab,
+nav ul li .fa,
+nav ul li .fas {
   color: #e5005a;
 }
 
@@ -162,7 +165,10 @@ nav ul li .material-icons {
   min-width: 100px;
 }
 
-.material-icons:hover {
+.material-icons:hover,
+.fab:hover,
+.fa:hover,
+.fas:hover {
   cursor: pointer;
 }
 
@@ -340,7 +346,10 @@ nav ul li .material-icons {
   transition: all 1s;
 }
 
-.productContainer .material-icons {
+.productContainer .material-icons,
+.productContainer .fab,
+.productContainer .fa,
+.productContainer .fas {
   color: #e5005a;
   -webkit-transition: all 2s;
   transition: all 2s;
@@ -366,7 +375,10 @@ nav ul li .material-icons {
   width: 280px;
 }
 
-.productContainer:hover .material-icons {
+.productContainer:hover .material-icons,
+.productContainer:hover .fab,
+.productContainer:hover .fa,
+.productContainer:hover .fas {
   opacity: 1;
 }
 
@@ -494,7 +506,10 @@ nav ul li .material-icons {
   cursor: pointer;
 }
 
-.goTop .material-icons {
+.goTop .material-icons,
+.goTop .fab,
+.goTop .fa,
+.goTop .fas {
   font-size: 50px;
   position: absolute;
   top: 10%;
@@ -550,7 +565,10 @@ nav ul li .material-icons {
   background-color: #e5005a;
 }
 
-.dropDownOption span:hover .material-icons {
+.dropDownOption span:hover .material-icons,
+.dropDownOption span:hover .fab,
+.dropDownOption span:hover .fa,
+.dropDownOption span:hover .fas {
   color: white;
 }
 

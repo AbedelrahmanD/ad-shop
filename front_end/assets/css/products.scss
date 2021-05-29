@@ -99,3 +99,32 @@
   margin-top: -60vh;
   z-index: 10;
 }
+.pagination {
+  @include limitWidth;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 10px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+.pages {
+  cursor: pointer;
+  padding: 3px;
+  background-color: white;
+  border-radius: 100px;
+  width: 30px;
+  height: 30px;
+  box-shadow: 1px 1px 10px grey;
+  display: grid;
+  place-items: center;
+  padding: 0px;
+  &:hover {
+    background-color: $primary;
+    color: white;
+  }
+}
+.selectedPage {
+  background-color: $primary;
+  color: white;
+}

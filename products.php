@@ -35,6 +35,7 @@
         </div>
     </div>
     <div class="targetList"></div>
+    <div class="pagination"></div>
 
 </section>
 

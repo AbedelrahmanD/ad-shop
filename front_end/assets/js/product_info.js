@@ -12,7 +12,7 @@ $(document).ready(function () {
       productId: id,
     },
     function (data, status) {
-      var result = JSON.parse(data);
+      var result = JSON.parse(data).products;
       product = result[0];
       var price;
       if (product["product_price_discount"] > 0) {

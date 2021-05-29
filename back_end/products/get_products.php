@@ -10,9 +10,11 @@ $colorQuery;
 $notIdQuery;
 $searchQuery;
 $typeQuery;
+$limitPerPage;
 if (isset($_POST["productType"])) {
     $value = $_POST["productType"];
-    $typeQuery = "AND product_type_id = '$value'";
+    if ($value . "" != "0")
+        $typeQuery = "AND product_type_id = '$value'";
 }
 if (isset($_POST["productId"])) {
     $value = $_POST["productId"];
@@ -20,7 +22,8 @@ if (isset($_POST["productId"])) {
 }
 if (isset($_POST["productColor"])) {
     $value = $_POST["productColor"];
-    $colorQuery = "AND FIND_IN_SET ('$value',productColorsId)";
+    if ($value . "" != "0")
+        $colorQuery = "AND FIND_IN_SET ('$value',productColorsId)";
 }
 if (isset($_POST["categoryId"])) {
     $value = $_POST["categoryId"];
@@ -48,11 +51,20 @@ if (isset($_POST["search"])) {
     $value = $_POST["search"];
     $searchQuery = "AND ( 	product_name  like '%$value%' OR product_description like '%$value%')";
 }
-$sql = "SELECT * FROM product WHERE product_enabled=1 $typeQuery $idQuery $categoryQuery $companyQuery $colorQuery $discountQuery $notIdQuery $searchQuery ORDER BY  	product_id DESC  $limitQuery";
-$result = $conn->query($sql);
+if (isset($_POST["limitPerPage"])) {
+    $value = $_POST["limitPerPage"];
+    $limitPerPage = "LIMIT $value";
+}
 
+
+
+
+$sql = "SELECT * FROM product WHERE product_enabled=1 $typeQuery $idQuery $categoryQuery $companyQuery $colorQuery $discountQuery $notIdQuery $searchQuery ORDER BY  	product_id DESC $limitPerPage  $limitQuery";
+$result = $conn->query($sql);
+$response = array();
+$products = array();
 if ($result->num_rows > 0) {
-    $response = array();
+
     // output data of each row
     while ($row = $result->fetch_assoc()) {
         $imagesArray = array();
@@ -73,8 +85,21 @@ if ($result->num_rows > 0) {
             $colorsArray[] = $colorRow;
         }
         $row["colors"] = $colorsArray;
-        $response[] = $row;
+        //$row["totalRows"] = $totalRows;
+        $products[] = $row;
     }
+
+
+
+
+    $response["products"] = $products;
+    $totalRows = 0;
+    $sql = "SELECT count(*) as total FROM product WHERE product_enabled=1 $typeQuery $idQuery $categoryQuery $companyQuery $colorQuery $discountQuery $notIdQuery $searchQuery ORDER BY  	product_id DESC ";
+    $result = $conn->query($sql);
+    while ($row = $result->fetch_assoc()) {
+        $totalRows = $row["total"];
+    }
+    $response["totalRows"] = $totalRows;
     echo json_encode($response);
 } else {
     echo json_encode([]);

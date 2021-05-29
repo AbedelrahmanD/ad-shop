@@ -126,3 +126,43 @@
   margin-top: -60vh;
   z-index: 10;
 }
+
+.pagination {
+  max-width: 1140px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  gap: 10px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.pages {
+  cursor: pointer;
+  padding: 3px;
+  background-color: white;
+  border-radius: 100px;
+  width: 30px;
+  height: 30px;
+  -webkit-box-shadow: 1px 1px 10px grey;
+          box-shadow: 1px 1px 10px grey;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  padding: 0px;
+}
+
+.pages:hover {
+  background-color: #e5005a;
+  color: white;
+}
+
+.selectedPage {
+  background-color: #e5005a;
+  color: white;
+}

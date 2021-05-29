@@ -45,7 +45,11 @@ function getData(obj, targetElementClass) {
     hostUrl + "back_end/products/get_products.php",
     obj,
     function (data, status) {
-      var result = JSON.parse(data);
+      var result = JSON.parse(data).products;
+      var totalRows = JSON.parse(data).totalRows;
+
+      if (result == null) return;
+
       var html = "";
 
       for (var i = 0; i < result.length; i++) {
@@ -81,7 +85,52 @@ function getData(obj, targetElementClass) {
       }
       html += "&nbsp;&nbsp;&nbsp;";
       var target = "." + targetElementClass;
+
       $("" + target + "").html(html);
+
+      if (obj.pagination == true) {
+        var pagesNumbers = totalRows;
+
+        var pages = "";
+        for (var i = 0; i < parseInt(pagesNumbers) / perPage; i++) {
+          var pageValue = i + 1;
+          pages +=
+            '<div id="page_' +
+            pageValue +
+            '" class="pages">' +
+            pageValue +
+            "</div>";
+        }
+        $(".pagination").html(pages);
+        $(".pages").removeClass("selectedPage");
+
+        var startRow = obj.limitPerPage.toString().split(",");
+        startPage = parseInt(startRow) / perPage + 1;
+        $("#page_" + startPage).addClass("selectedPage");
+        $(".pages").click(function () {
+          var search = obj.search == null ? "" : obj.search;
+          var selectedType = $("#types").val();
+          var selectedColor = $("#colors").val();
+          var category = "";
+          if (obj.categoryId != null) category = "category=" + obj.categoryId;
+          else category = "discount=true";
+          var pageNumber = $(this).text();
+          var limitPerPage = (pageNumber - 1) * parseInt(perPage);
+
+          window.location.href =
+            "products.php?search=" +
+            search +
+            "&" +
+            category +
+            "&color=" +
+            selectedColor +
+            "&type=" +
+            selectedType +
+            "&pageNumber=" +
+            limitPerPage;
+        });
+      }
+
       setTimeout(() => {
         $("#loadingScreen").fadeOut();
       }, 1000);

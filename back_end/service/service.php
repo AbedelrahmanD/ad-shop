@@ -17,6 +17,8 @@ if ($_GET["limit"]) {
 $sql = "SELECT product_id FROM product,product_type WHERE product_enabled=1 and product.product_type_id =product_type.product_type_id  $typeyQuery  $limitQuery";
 $result = $conn->query($sql);
 
+
+
 if ($result->num_rows > 0) {
     $actual_link = "http://localhost/web_project/";
     $response = array();
