@@ -113,7 +113,7 @@ function getData(obj, targetElementClass) {
           var selectedColor = $("#colors").val();
           var category = "";
           if (obj.categoryId != null) category = "category=" + obj.categoryId;
-          else category = "discount=true";
+          else if (obj.discount != null) category = "discount=true";
           var pageNumber = $(this).text();
           var limitPerPage = (pageNumber - 1) * parseInt(perPage);
 

@@ -31,7 +31,7 @@ $(function () {
     var selectedColor = $("#colors").val();
     var category = "";
     if (categoryId != null) category = "category=" + categoryId;
-    else category = "discount=true";
+    else if (discount != null) category = "discount=true";
 
     window.location.href =
       "products.php?search=" +
