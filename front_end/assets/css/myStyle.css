@@ -746,7 +746,23 @@ select {
   background-color: #e5005a;
 }
 
+.flexHE {
+  width: 100%;
+  max-width: 1140px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
 @media screen and (max-width: 768px) {
+  .flexHE {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
   .product_slider_carousel {
     overflow: auto;
   }

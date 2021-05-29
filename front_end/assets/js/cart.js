@@ -125,12 +125,12 @@ function drawCart() {
 
     html += "</div >";
     html +=
-      '<div class="totalCartPrice"><h1>Total</h1><p>' +
+      '<div class="flexHE"><div class="totalCartPrice"><h1>Total</h1><p>' +
       total +
       "$</p>" +
       '<div class="sliderBtns" >' +
       '<a class="btn1" >Order</a>' +
-      "</div></div>";
+      "</div></div></div>";
   } else {
     html =
       "<div class='noProducts'><h1>Your cart is empty</h1><a href='products.php'>Check avilable products&nbsp;<span class='material-icons'>navigation</span></a></div>";

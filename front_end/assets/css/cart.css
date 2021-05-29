@@ -114,7 +114,7 @@
 
 #cartInfo .totalCartPrice {
   margin-top: 1rem;
-  max-width: 300px;
+  width: 300px;
   -webkit-box-shadow: 1px 1px 5px grey;
           box-shadow: 1px 1px 5px grey;
   border-radius: 5px;

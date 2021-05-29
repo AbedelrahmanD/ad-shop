@@ -542,7 +542,16 @@ select {
     }
   }
 }
+.flexHE {
+  width: 100%;
+  max-width: 1140px;
+  display: flex;
+  justify-content: flex-end;
+}
 @media screen and (max-width: 768px) {
+  .flexHE {
+    justify-content: center;
+  }
   .product_slider_carousel {
     overflow: auto;
   }
