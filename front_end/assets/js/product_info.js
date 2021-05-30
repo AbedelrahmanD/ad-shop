@@ -1,20 +1,34 @@
 var product;
+function getColorName(colorId) {
+  for (var i = 0; i < product["colors"].length; i++) {
+    if (product["colors"][i]["productColorsId"] == colorId) {
+      return product["colors"][i]["productColorsName"];
+    }
+  }
+}
+function moveNextProductInfo() {
+  $("#scrollbarProductInfo").stop().animate({ scrollLeft: "+=565" }, 565);
+}
+function movePrevProductInfo() {
+  $("#scrollbarProductInfo").stop().animate({ scrollLeft: "-=565" }, 565);
+}
 $(document).ready(function () {
   //get product id from param
   var searchParams = new URLSearchParams(window.location.search);
   var id = searchParams.get("product");
   //fetch product info
   if (id == null) return;
-
   $.post(
     "back_end/products/get_products.php",
     {
       productId: id,
     },
     function (data, status) {
+      //get product info
       var result = JSON.parse(data).products;
       product = result[0];
       var price;
+      //check if the product has discount price
       if (product["product_price_discount"] > 0) {
         price =
           '<span class="stroke">' +
@@ -47,7 +61,7 @@ $(document).ready(function () {
       };
       getData(obj, "target");
 
-      //fill color picker
+      //fill color select
       var colors = "";
       for (var i = 0; i < product["colors"].length; i++) {
         var colorName = product["colors"][i]["productColorsName"];
@@ -72,21 +86,10 @@ $(document).ready(function () {
 
   $("#addToCart").click(function () {
     var quantity = $("#quantity").text();
-    var colorName = $("#colorsOptions").text();
     var colorId = $("#colorsOptions").val();
-
     product.quantity = quantity;
     product.categoryId = colorId;
     product.colorName = getColorName(colorId);
-
     saveProduct(product);
   });
 });
-
-function getColorName(colorId) {
-  for (var i = 0; i < product["colors"].length; i++) {
-    if (product["colors"][i]["productColorsId"] == colorId) {
-      return product["colors"][i]["productColorsName"];
-    }
-  }
-}

@@ -20,7 +20,6 @@
 
 <script src="front_end/assets/js/aos.js"></script>
 <script src="front_end/assets/js/jquery.js"></script>
-<script src="front_end/assets/js/popper.js"></script>
 <script src="front_end/assets/js/script.js"></script>
 <script src="front_end/assets/js/cart.js"></script>
 <script src="front_end/assets/js/home_script.js"></script>

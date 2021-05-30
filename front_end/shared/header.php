@@ -15,16 +15,12 @@
     <link href="front_end/assets/css/homeStyle.css" rel="stylesheet" />
     <link href="front_end/assets/css/service.css" rel="stylesheet" />
     <link href="front_end/assets/css/cart.css" rel="stylesheet" />
-    <title>SHOPY</title>
+    <title>Shopy</title>
 </head>
 
 <body>
     <div class="bodyMain">
-        <div id="goTop" class="goTop">
-            <span class="material-icons">
-                keyboard_arrow_up
-            </span>
-        </div>
+
         <nav>
 
             <a href="index.php" id="brandDiv">
@@ -119,7 +115,10 @@
 
 
         <div id="loadingScreen">
-            <div ">
-                <img src=" front_end/assets/images/loading.gif" />
+            <img src=" front_end/assets/images/loading.gif" />
         </div>
-    </div>
+        <div id="goTop" class="goTop">
+            <span class="material-icons">
+                keyboard_arrow_up
+            </span>
+        </div>

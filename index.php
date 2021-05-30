@@ -25,8 +25,9 @@
     </div>
 
 </section>
+
 <div class="homeContainer">
-    <!--- top section begins -->
+    <!--- top sales section begins -->
     <div class="titleWraper" data-aos="zoom-in" data-aos-duration="1500" data-aos="zoom-in" data-aos-duration="1000">
         <h1>Top Sales
             <span class="material-icons">
@@ -35,6 +36,7 @@
 
         </h1>
     </div>
+
     <a href="product_info.php?product=13" class="productReview" data-aos="fade-right" data-aos-duration="1500">
         <div class="productReviewImageContainer">
             <img src="back_end/upload/products/13/51-25r7hJrL._AC_UY679_.jpg" alt="">
@@ -48,7 +50,6 @@
             male
         </span>
     </a>
-
 
     <a href="product_info.php?product=1" class="productReview flexReverse" data-aos="fade-left" data-aos-duration="1500">
         <div class="productReviewDetails">
@@ -64,9 +65,6 @@
         </span>
     </a>
 
-
-
-
     <a href="product_info.php?product=10" class="productReview" data-aos="fade-right" data-aos-duration="1500">
         <div class="productReviewImageContainer">
             <img src="back_end/upload/products/10/1XfYQn9j+L._AC_UX679_.jpg" alt="">
@@ -81,6 +79,7 @@
         </div>
     </a>
     <!-- top section ends-->
+
     <!-------------------------- sign up section begins ------------------>
     <section class="signUpSetion">
         <div class="join">
@@ -90,8 +89,8 @@
             </div>
         </div>
     </section>
-    <!-------------------------- sign up section ends ------------------>
 
+    <!-------------------------- sign up section ends ------------------>
     <div class="categoryBigSection">
 
         <!-------------------------- discount section begins ------------------>
@@ -119,8 +118,10 @@
 
                 <div id="scrollbarDiscount" class="product_slider_carousel discountTarget">
                 </div>
-                <div class="sliderBtns">
-                    <a class="btn1" href="products.php?discount=true">More</a>
+                <div class="sliderBtnFullContainer">
+                    <div class="sliderBtns">
+                        <a class="btn1" href="products.php?discount=true">More</a>
+                    </div>
                 </div>
             </section>
         </section>
@@ -150,8 +151,10 @@
 
                 <div id="scrollbarMen" class="product_slider_carousel menTarget">
                 </div>
-                <div class="sliderBtns">
-                    <a class="btn1" href="products.php?category=1">More</a>
+                <div class="sliderBtnFullContainer">
+                    <div class="sliderBtns">
+                        <a class="btn1" href="products.php?category=1">More</a>
+                    </div>
                 </div>
             </section>
         </section>
@@ -183,8 +186,10 @@
 
                 <div id="scrollbarWomen" class="product_slider_carousel womenTarget">
                 </div>
-                <div class="sliderBtns">
-                    <a class="btn1" href="products.php?category=2">More</a>
+                <div class="sliderBtnFullContainer">
+                    <div class="sliderBtns">
+                        <a class="btn1" href="products.php?category=2">More</a>
+                    </div>
                 </div>
             </section>
         </section>
@@ -215,8 +220,10 @@
 
                 <div id="scrollbarKids" class="product_slider_carousel kidsTarget">
                 </div>
-                <div class="sliderBtns">
-                    <a class="btn1" href="products.php?category=3">More</a>
+                <div class="sliderBtnFullContainer">
+                    <div class="sliderBtns">
+                        <a class="btn1" href="products.php?category=3">More</a>
+                    </div>
                 </div>
             </section>
         </section>

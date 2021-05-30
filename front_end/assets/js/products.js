@@ -1,56 +1,6 @@
 var perPage = 6;
 var startPage = 0;
 var obj;
-$(function () {
-  var searchParams = new URLSearchParams(window.location.search);
-  var categoryId = searchParams.get("category");
-  var discount = searchParams.get("discount");
-  var search = searchParams.get("search");
-  var color = searchParams.get("color");
-  var type = searchParams.get("type");
-  var pageNumber = searchParams.get("pageNumber");
-  obj = {};
-  if (categoryId != null) obj.categoryId = categoryId;
-  if (discount != null) obj.discount = true;
-  if (search != null) obj.search = search;
-  if (color != null) obj.productColor = color;
-  if (type != null) obj.productType = type;
-  if (pageNumber != null) obj.limitPerPage = pageNumber + "," + perPage;
-  else obj.limitPerPage = 0 + "," + perPage;
-  fillSearch(obj);
-  obj.pagination = true;
-  getData(obj, "targetList");
-
-  $("#searchBtn").click(function () {
-    //get data
-
-    //replace href
-
-    var search = $("#searchName").val();
-    var selectedType = $("#types").val();
-    var selectedColor = $("#colors").val();
-    var category = "";
-    if (categoryId != null) category = "category=" + categoryId;
-    else if (discount != null) category = "discount=true";
-
-    window.location.href =
-      "products.php?search=" +
-      search +
-      "&" +
-      category +
-      "&color=" +
-      selectedColor +
-      "&type=" +
-      selectedType +
-      "&pageNumber=0";
-  });
-
-  $("#advancedSearchToggle").click(function () {
-    $(".advancedBlock").slideToggle();
-  });
-  getTypes();
-  getColors();
-});
 function getTypes() {
   var selected = "";
   var types = "<option value='0'>All</option>";
@@ -89,7 +39,52 @@ function getColors() {
     $("#colors").html(colors);
   });
 }
-
 function fillSearch(obj) {
   $("#searchName").val(obj.search);
 }
+
+$(function () {
+  var searchParams = new URLSearchParams(window.location.search);
+  var categoryId = searchParams.get("category");
+  var discount = searchParams.get("discount");
+  var search = searchParams.get("search");
+  var color = searchParams.get("color");
+  var type = searchParams.get("type");
+  var pageNumber = searchParams.get("pageNumber");
+  obj = {};
+  if (categoryId != null) obj.categoryId = categoryId;
+  if (discount != null) obj.discount = true;
+  if (search != null) obj.search = search;
+  if (color != null) obj.productColor = color;
+  if (type != null) obj.productType = type;
+  if (pageNumber != null) obj.limitPerPage = pageNumber + "," + perPage;
+  else obj.limitPerPage = 0 + "," + perPage;
+  obj.pagination = true;
+  fillSearch(obj);
+  getData(obj, "targetList");
+
+  $("#searchBtn").click(function () {
+    var search = $("#searchName").val();
+    var selectedType = $("#types").val();
+    var selectedColor = $("#colors").val();
+    var category = "";
+    if (categoryId != null) category = "category=" + categoryId;
+    else if (discount != null) category = "discount=true";
+    window.location.href =
+      "products.php?search=" +
+      search +
+      "&" +
+      category +
+      "&color=" +
+      selectedColor +
+      "&type=" +
+      selectedType +
+      "&pageNumber=0";
+  });
+  //show hide advanced search
+  $("#advancedSearchToggle").click(function () {
+    $(".advancedBlock").slideToggle();
+  });
+  getTypes();
+  getColors();
+});

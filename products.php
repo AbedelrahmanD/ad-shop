@@ -3,6 +3,7 @@
 
 <section class="productsSection">
     <div class="coverImage">
+        <!--serach begins -->
         <div class="searchContainer">
             <input id="searchName" type="text" placeholder="Search..." list="searchOptions" />
             <button id="searchBtn">
@@ -21,13 +22,13 @@
         </div>
         <div class="advancedBlock">
             <div class="searchOptions">
-                <div class="flexH">
+                <div class="flexV">
                     <div> Type</div>
                     <select id="types" class="colorPicker">
 
                     </select>
                 </div>
-                <div class="flexH">
+                <div class="flexV">
                     <div>Color</div>
                     <select id="colors" class="colorPicker">
 
@@ -35,6 +36,7 @@
                 </div>
             </div>
         </div>
+        <!--search ends -->
     </div>
     <div class="targetList"></div>
     <div class="pagination"></div>

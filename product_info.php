@@ -2,15 +2,12 @@
 
 <section id="productView">
     <div class="sliderBtns backBtn">
-
         <a class="btn1 goBack" href="#">
             <span class="material-icons">
                 arrow_back_ios
             </span>
             Back
-
         </a>
-
     </div>
     <div class="product">
         <div class="productImages">
@@ -40,18 +37,14 @@
             <h2 id="productName">
                 Product Name
             </h2>
-            <!-- <h3>
-                Description:
-            </h3> -->
-            <p id="productDescription">
 
+            <p id="productDescription">
                 description here
             </p>
             <div class="flexDiv">
-                <!-- <h3>Price: </h3> -->
                 <h4 id="productPrice">50$</h4>
             </div>
-            <div class="flexDivH">
+            <div class="flexV">
                 <div class="customInputNumber">
                     <div class=" numberAction plusNumber">+</div>
                     &nbsp;
@@ -62,11 +55,12 @@
 
                 <select id="colorsOptions" class="colorPicker"></select>
                 <div class="sliderBtns">
-                    <a id="addToCart" class="btn1">Add To Cart <span class=" material-icons">
+                    <a id="addToCart" class="btn1">
+                        Add To Cart
+                        <span class=" material-icons">
                             shopping_cart
                         </span>
                     </a>
-
                 </div>
             </div>
         </div>

@@ -79,10 +79,8 @@
             Demo
         </h1>
         <div class="searchOptionsContainer">
-
             <div class="searchContainer">
                 <input id="searchTypeValue" type="text" placeholder="Search Type" />
-
             </div>
             <div class="searchContainer">
                 <input id="limitValue" type="number" placeholder="limit" />

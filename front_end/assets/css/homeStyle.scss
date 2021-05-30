@@ -41,20 +41,6 @@
     max-width: 300px;
   }
 }
-.sliderBtns {
-  width: 200px;
-  a {
-    display: inline-block;
-    text-align: center;
-    padding: 15px;
-    font-weight: bold;
-    font-size: 20px;
-    min-width: 200px;
-    cursor: pointer;
-    position: relative;
-    z-index: 1;
-  }
-}
 
 .productReview {
   @include limitWidth;

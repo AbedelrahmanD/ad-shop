@@ -1,4 +1,4 @@
-//get cart products
+//get  products saved in local storage
 function getCartProducts() {
   var temp = localStorage.getItem("products");
   var products = [];
@@ -7,7 +7,7 @@ function getCartProducts() {
   }
   return products;
 }
-
+//save product in local storage
 function saveProduct(product) {
   var products = [];
   products = getCartProducts();
@@ -30,7 +30,7 @@ function saveProduct(product) {
   updateCartNumber();
   $(".toastContainer").css({ transform: "translateY(0px)" });
 }
-
+//update number of products near the cart icon in nav
 function updateCartNumber() {
   var products = [];
   products = getCartProducts();
@@ -40,6 +40,7 @@ function updateCartNumber() {
   }
   $("#cartNumber").text(total);
 }
+//remove product from local storage
 function removeProduct(index) {
   var temp = [];
   temp = getCartProducts();
@@ -54,7 +55,7 @@ function removeProduct(index) {
   drawCart();
   updateCartNumber();
 }
-updateCartNumber();
+//if local storage is not empty, draw cart else draw elert
 function drawCart() {
   var products = [];
   var total = 0;
@@ -62,6 +63,7 @@ function drawCart() {
   products = getCartProducts();
   var image;
   if (products.length > 0) {
+    //cart header
     var html = "<div >";
     html += "<div class='singleProductView cartHeader'>";
     html += "<div  class='productImg'>";
@@ -84,6 +86,7 @@ function drawCart() {
     html += "</div>";
     html += "</div>";
     for (var i = products.length - 1; i >= 0; i--) {
+      //cart body
       total +=
         parseFloat(products[i].quantity) *
         parseFloat(products[i].product_price);
@@ -132,10 +135,11 @@ function drawCart() {
       '<a class="btn1" >Order</a>' +
       "</div></div></div>";
   } else {
+    //alert no products in cart
     html =
       "<div class='noProducts'><h1>Your cart is empty</h1><a href='products.php'>Check avilable products&nbsp;<span class='material-icons'>navigation</span></a></div>";
   }
   $("#cartInfo").html(html);
 }
-
+updateCartNumber();
 drawCart();

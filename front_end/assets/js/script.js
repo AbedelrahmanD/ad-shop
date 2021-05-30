@@ -1,46 +1,11 @@
 var hostUrl = "";
-
 function calculateFooterHeight() {
   var height = $("#footer").height();
   $("body").css({ "padding-bottom": height + 15 });
 }
-function moveNextMen() {
-  $("#scrollbarMen").stop().animate({ scrollLeft: "+=565" }, 565);
-}
-function movePrevMen() {
-  $("#scrollbarMen").stop().animate({ scrollLeft: "-=565" }, 565);
-}
 
-function moveNextWomen() {
-  $("#scrollbarWomen").stop().animate({ scrollLeft: "+=565" }, 565);
-}
-function movePrevWomen() {
-  $("#scrollbarWomen").stop().animate({ scrollLeft: "-=565" }, 565);
-}
-
-function moveNextKids() {
-  $("#scrollbarKids").stop().animate({ scrollLeft: "+=565" }, 565);
-}
-function movePrevKids() {
-  $("#scrollbarKids").stop().animate({ scrollLeft: "-=565" }, 565);
-}
-
-function moveNextDiscount() {
-  $("#scrollbarDiscount").stop().animate({ scrollLeft: "+=565" }, 565);
-}
-function movePrevDiscount() {
-  $("#scrollbarDiscount").stop().animate({ scrollLeft: "-=565" }, 565);
-}
-
-function moveNextProductInfo() {
-  $("#scrollbarProductInfo").stop().animate({ scrollLeft: "+=565" }, 565);
-}
-function movePrevProductInfo() {
-  $("#scrollbarProductInfo").stop().animate({ scrollLeft: "-=565" }, 565);
-}
 function getData(obj, targetElementClass) {
   $("#loadingScreen").show();
-
   $.post(
     hostUrl + "back_end/products/get_products.php",
     obj,
@@ -49,8 +14,9 @@ function getData(obj, targetElementClass) {
       var totalRows = JSON.parse(data).totalRows;
 
       if (result == null) return;
-
+      //draw list of products
       var html = "";
+      //create options for datalist
       var autoComplete = "";
 
       for (var i = 0; i < result.length; i++) {
@@ -73,6 +39,7 @@ function getData(obj, targetElementClass) {
           "  </span>" +
           "  </div>" +
           ' <div class="productTextContainer">';
+        //check if it has discount price
         if (discountPrice == 0) {
           html += " <span>" + price + "$</span>";
         } else {
@@ -89,7 +56,7 @@ function getData(obj, targetElementClass) {
       var target = "." + targetElementClass;
 
       $("" + target + "").html(html);
-
+      //create pagination
       if (obj.pagination == true) {
         $("#searchOptions").html(autoComplete);
         var pagesNumbers = totalRows;
@@ -106,7 +73,7 @@ function getData(obj, targetElementClass) {
         $(".pagination").html(pages);
         $(".pages").removeClass("selectedPage");
 
-        var startRow = obj.limitPerPage.toString().split(",");
+        var startRow = obj.limitPerPage.toString().split(",")[0];
         startPage = parseInt(startRow) / perPage + 1;
         $("#page_" + startPage).addClass("selectedPage");
         $(".pages").click(function () {
@@ -141,9 +108,18 @@ function getData(obj, targetElementClass) {
 }
 
 $(function () {
+  AOS.init();
   calculateFooterHeight();
   window.onresize = () => {
     calculateFooterHeight();
+  };
+
+  window.onscroll = () => {
+    if (window.scrollY > 0) {
+      $("#goTop").fadeIn();
+    } else {
+      $("#goTop").fadeOut();
+    }
   };
 
   $(".toastContainer").click(function () {
@@ -181,13 +157,7 @@ $(function () {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
   });
-  window.onscroll = () => {
-    if (window.scrollY > 0) {
-      $("#goTop").fadeIn();
-    } else {
-      $("#goTop").fadeOut();
-    }
-  };
+
   $(".goBack").click(function () {
     window.history.back();
   });

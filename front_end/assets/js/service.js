@@ -7,7 +7,6 @@ $(function () {
       function (data, status) {
         var jsonObj = JSON.parse(data);
         var jsonPretty = JSON.stringify(jsonObj, null, "\t");
-
         $("#jsonData").text(jsonPretty);
       }
     );

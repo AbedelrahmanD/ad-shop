@@ -123,6 +123,10 @@
           justify-content: flex-start;
 }
 
+.demo .searchContainer input {
+  border-radius: 100px;
+}
+
 .searchOptionsContainer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -130,6 +134,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  gap: 10px;
 }
 
 .service table {
@@ -159,6 +164,9 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
   .ourService {
     -webkit-box-orient: vertical;

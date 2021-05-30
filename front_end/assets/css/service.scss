@@ -80,11 +80,15 @@
   margin-top: 1rem;
   .searchContainer {
     justify-content: flex-start;
+    input {
+      border-radius: 100px;
+    }
   }
 }
 .searchOptionsContainer {
   display: flex;
   align-items: center;
+  gap: 10px;
 }
 .service {
   table {
@@ -104,6 +108,7 @@
 @media screen and (max-width: 500px) {
   .searchOptionsContainer {
     flex-direction: column;
+    align-items: flex-start;
   }
   .ourService {
     flex-direction: column;
