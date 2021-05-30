@@ -125,6 +125,10 @@
   border-radius: 5px;
 }
 
+.similarProducts {
+  padding: 5px;
+}
+
 .similarProducts h2 {
   font-weight: bold;
   border-bottom: 5px solid #e5005a;

@@ -4,7 +4,14 @@
         <img class="footerImages" src="front_end/assets/images/instagram.png" alt="">
         <img class="footerImages" src="front_end/assets/images/twitter.png" alt="">
     </div>
-    <h3>Homework Responsive Design - 2021.</h3>
+
+    <h3 class="flexHC">
+        <span class="material-icons">account_circle</span>
+        <a href="#">
+            Abedelrahman Dabet - Design 2021.
+        </a>
+    </h3>
+
 </section>
 
 

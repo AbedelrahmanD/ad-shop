@@ -46,7 +46,6 @@ p {
 }
 a {
   text-decoration: none;
-  color: black;
 }
 nav {
   box-shadow: 1px 1px 5px gray;
@@ -343,9 +342,9 @@ nav {
     font-weight: bold;
     cursor: pointer;
     transition: all 0.5s;
-    &:hover {
-      color: $primary;
-    }
+  }
+  a {
+    color: white;
   }
 }
 .footerImagesContainer {
@@ -542,11 +541,19 @@ select {
     }
   }
 }
-.flexHE {
+.flexHE,
+.flexHC {
   width: 100%;
   max-width: 1140px;
   display: flex;
+}
+.flexHE {
   justify-content: flex-end;
+}
+.flexHC {
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
 }
 @media screen and (max-width: 768px) {
   .flexHE {
