@@ -4,13 +4,15 @@
 <section class="productsSection">
     <div class="coverImage">
         <div class="searchContainer">
-            <input id="searchName" type="text" placeholder="Search..." />
+            <input id="searchName" type="text" placeholder="Search..." list="searchOptions" />
             <button id="searchBtn">
                 <span class="material-icons">
                     search
                 </span>
             </button>
         </div>
+        <datalist id="searchOptions">
+        </datalist>
         <div class="advancedSearch">
             <div id="advancedSearchToggle" class="sliderBtns">
                 <a class="dropDownTitle btn2" href="#"> Advanced Search</a>

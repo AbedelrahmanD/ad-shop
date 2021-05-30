@@ -51,6 +51,7 @@ function getData(obj, targetElementClass) {
       if (result == null) return;
 
       var html = "";
+      var autoComplete = "";
 
       for (var i = 0; i < result.length; i++) {
         var name = result[i]["product_name"];
@@ -58,6 +59,7 @@ function getData(obj, targetElementClass) {
         var discountPrice = result[i]["product_price_discount"];
         var image = result[i]["images"][0];
         var id = result[i]["product_id"];
+        autoComplete += "<option>" + name + "</option>'";
         html +=
           '<a href="product_info.php?product=' +
           id +
@@ -89,8 +91,8 @@ function getData(obj, targetElementClass) {
       $("" + target + "").html(html);
 
       if (obj.pagination == true) {
+        $("#searchOptions").html(autoComplete);
         var pagesNumbers = totalRows;
-
         var pages = "";
         for (var i = 0; i < parseInt(pagesNumbers) / perPage; i++) {
           var pageValue = i + 1;
