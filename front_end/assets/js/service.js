@@ -2,6 +2,7 @@ $(function () {
   $("#searchType").click(function () {
     var type = $("#searchTypeValue").val();
     var limit = $("#limitValue").val();
+    $("#jsonData").text("Loading...");
     $.get(
       hostUrl + "back_end/service/service.php?type=" + type + "&limit=" + limit,
       function (data, status) {
