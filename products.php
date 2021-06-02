@@ -12,8 +12,8 @@
                 </span>
             </button>
         </div>
-        <datalist id="searchOptions">
-        </datalist>
+
+
         <div class="advancedSearch">
             <div id="advancedSearchToggle" class="sliderBtns">
                 <a class="dropDownTitle btn2" href="#"> Advanced Search</a>

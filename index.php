@@ -90,8 +90,11 @@
         </div>
     </section>
 
+
     <!-------------------------- sign up section ends ------------------>
     <div class="categoryBigSection">
+
+
 
         <!-------------------------- discount section begins ------------------>
         <section id="discountSection" class="viewSection" data-aos="zoom-in" data-aos-duration="1500">
@@ -230,4 +233,5 @@
         <!-------------------------- kids section ends ------------------>
     </div>
     <div>
+
         <?php include("front_end/shared/footer.php"); ?>

@@ -17,15 +17,16 @@ function getData(obj, targetElementClass) {
       //draw list of products
       var html = "";
       //create options for datalist
-      var autoComplete = "";
 
+      var availableTags = [];
       for (var i = 0; i < result.length; i++) {
         var name = result[i]["product_name"];
         var price = result[i]["product_price"];
         var discountPrice = result[i]["product_price_discount"];
         var image = result[i]["images"][0];
         var id = result[i]["product_id"];
-        autoComplete += "<option>" + name + "</option>'";
+        availableTags.push(name);
+
         html +=
           '<a href="product_info.php?product=' +
           id +
@@ -56,9 +57,13 @@ function getData(obj, targetElementClass) {
       var target = "." + targetElementClass;
 
       $("" + target + "").html(html);
+
       //create pagination
       if (obj.pagination == true) {
-        $("#searchOptions").html(autoComplete);
+        $("#searchName").autocomplete({
+          source: availableTags,
+        });
+
         var pagesNumbers = totalRows;
         var pages = "";
         for (var i = 0; i < parseInt(pagesNumbers) / perPage; i++) {

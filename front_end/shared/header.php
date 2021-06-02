@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="front_end/assets/images/shop.png">
+    <link href="front_end/assets/css/jquery_ui.css" rel="stylesheet" />
     <link href="front_end/assets/css/font.css" rel="stylesheet" />
     <link href="front_end/assets/css/aos.css" rel="stylesheet">
     <link href="front_end/assets/css/icons.css" rel="stylesheet" />

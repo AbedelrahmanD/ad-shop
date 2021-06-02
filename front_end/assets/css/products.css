@@ -66,7 +66,6 @@
           justify-content: center;
   margin: auto;
   margin-top: -60vh;
-  z-index: 10;
 }
 
 .pagination {
@@ -107,4 +106,16 @@
 .selectedPage {
   background-color: #e5005a;
   color: white;
+}
+
+@media screen and (min-width: 700px) and (max-width: 1000px) {
+  .targetList {
+    margin-top: -70vh;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .targetList {
+    margin-top: -50vh;
+  }
 }
