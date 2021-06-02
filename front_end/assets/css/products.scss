@@ -2,27 +2,17 @@
 .productsSection {
   @include sectionMargin;
   .coverImage {
-    clip-path: polygon(
-      50% 0%,
-      100% 0,
-      100% 43%,
-      100% 100%,
-      83% 83%,
-      17% 83%,
-      0 100%,
-      0% 43%,
-      0 0
-    );
-    z-index: 2;
     background-color: $primary;
-    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     padding-top: 1rem;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    margin-bottom: 1rem;
   }
 }
 
@@ -44,6 +34,8 @@
 .advancedBlock {
   display: none;
   width: 300px;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
 }
 .targetList {
   @include limitWidth;
@@ -52,7 +44,6 @@
   gap: 5rem;
   justify-content: center;
   margin: auto;
-  margin-top: -60vh;
 }
 .pagination {
   @include limitWidth;
@@ -82,16 +73,4 @@
 .selectedPage {
   background-color: $primary;
   color: white;
-}
-
-@media screen and (min-width: 700px) and (max-width: 1000px) {
-  .targetList {
-    margin-top: -70vh;
-  }
-}
-
-@media screen and (max-width: 320px) {
-  .targetList {
-    margin-top: -50vh;
-  }
 }
