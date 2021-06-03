@@ -2,7 +2,7 @@
 
 <section id="productView">
     <div class="sliderBtns backBtn">
-        <a class="btn1 goBack" href="#">
+        <a class="btn1 goBack">
             <span class="material-icons">
                 arrow_back_ios
             </span>
@@ -16,12 +16,12 @@
             </div>
 
             <section class="carouselSection">
-                <button class="carouselArrow carouselNextArrow" onclick="moveNextProductInfo()">
+                <button class="carouselArrow carouselNextArrow">
                     <span class="material-icons">
                         arrow_forward_ios
                     </span>
                 </button>
-                <button class="carouselArrow carouselPrevArrow" onclick="movePrevProductInfo()">
+                <button class="carouselArrow carouselPrevArrow">
                     <span class="material-icons">
                         arrow_back_ios
                     </span>

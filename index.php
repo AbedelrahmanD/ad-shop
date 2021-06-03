@@ -4,26 +4,27 @@
 <section id="slider">
 
     <!-- <div class="overLay"></div> -->
-    <div class="sliderContents">
+    <div class="sliderLimiter">
+        <div class="sliderContents">
 
-        <div class="textSlider" data-aos="fade-right" data-aos-delay="1000" data-aos-duration="2000">
-            <h1>
-                Lorem ipsum, dolor sit amet consectetur adipisicing.
-            </h1>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis hic ea officiis vero esse! Ipsum!
-            </p>
+            <div class="textSlider" data-aos="fade-right" data-aos-delay="1000" data-aos-duration="2000">
+                <h1>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing.
+                </h1>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis hic ea officiis vero esse! Ipsum!
+                </p>
+            </div>
+
+            <div class="sliderBtns" data-aos="fade-up" data-aos-delay="1500" data-aos-duration="2000">
+                <a class="btn2" href="products.php">Discover</a>
+            </div>
+
         </div>
-
-        <div class="sliderBtns" data-aos="fade-up" data-aos-delay="1500" data-aos-duration="2000">
-            <a class="btn2" href="products.php">Discover</a>
+        <div class="shopImage" data-aos="fade-left" data-aos-delay="1000" data-aos-duration="2000">
+            <img src="front_end/assets/images/shop.svg" alt="">
         </div>
-
     </div>
-    <div class="shopImage" data-aos="fade-left" data-aos-delay="1000" data-aos-duration="2000">
-        <img src="front_end/assets/images/shop.svg" alt="">
-    </div>
-
 </section>
 
 <div class="homeContainer">
@@ -108,12 +109,12 @@
             </div>
 
             <section class="carouselSection">
-                <button class="carouselArrow carouselNextArrow" onclick="moveNextDiscount()">
+                <button class="carouselArrow carouselNextArrow">
                     <span class="material-icons">
                         arrow_forward_ios
                     </span>
                 </button>
-                <button class="carouselArrow carouselPrevArrow" onclick="movePrevDiscount()">
+                <button class="carouselArrow carouselPrevArrow">
                     <span class="material-icons">
                         arrow_back_ios
                     </span>
@@ -141,12 +142,12 @@
                 </h1>
             </div>
             <section class="carouselSection">
-                <button class="carouselArrow carouselNextArrow" onclick="moveNextMen()">
+                <button class="carouselArrow carouselNextArrow">
                     <span class="material-icons">
                         arrow_forward_ios
                     </span>
                 </button>
-                <button class="carouselArrow carouselPrevArrow" onclick="movePrevMen()">
+                <button class="carouselArrow carouselPrevArrow">
                     <span class="material-icons">
                         arrow_back_ios
                     </span>
@@ -175,12 +176,12 @@
                 </h1>
             </div>
             <section class="carouselSection">
-                <button class="carouselArrow carouselNextArrow" onclick="moveNextWomen()">
+                <button class="carouselArrow carouselNextArrow">
                     <span class="material-icons">
                         arrow_forward_ios
                     </span>
                 </button>
-                <button class="carouselArrow carouselPrevArrow" onclick="movePrevWomen()">
+                <button class="carouselArrow carouselPrevArrow">
 
                     <span class="material-icons">
                         arrow_back_ios
@@ -209,12 +210,12 @@
                 </h1>
             </div>
             <section class="carouselSection">
-                <button class="carouselArrow carouselNextArrow" onclick="moveNextKids()">
+                <button class="carouselArrow carouselNextArrow">
                     <span class="material-icons">
                         arrow_forward_ios
                     </span>
                 </button>
-                <button class="carouselArrow carouselPrevArrow" onclick="movePrevKids()">
+                <button class="carouselArrow carouselPrevArrow">
 
                     <span class="material-icons">
                         arrow_back_ios

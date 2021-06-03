@@ -80,9 +80,6 @@
   margin-top: 1rem;
   .searchContainer {
     justify-content: flex-start;
-    input {
-      border-radius: 100px;
-    }
   }
 }
 .searchOptionsContainer {
@@ -96,7 +93,13 @@
     border-collapse: collapse;
     td,
     th {
-      padding: 15px;
+      padding: 10px;
+    }
+    th {
+      min-width: 70px;
+    }
+    td {
+      min-width: 160px;
     }
   }
 }

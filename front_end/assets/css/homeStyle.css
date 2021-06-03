@@ -12,6 +12,14 @@
   border-bottom-right-radius: 500px;
 }
 
+#slider .sliderLimiter {
+  max-width: 1500px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .shopImage {
   width: 40%;
 }
@@ -115,11 +123,6 @@
   font-weight: bold;
 }
 
-.productReviewDetails h3:nth-last-child(1) {
-  color: #e5005a;
-  font-weight: bold;
-}
-
 .join {
   background-color: #e5005a;
   display: -webkit-box;
@@ -177,6 +180,7 @@
 .titleWraper h1 {
   border-bottom: 3px solid #e5005a;
   margin-bottom: 2rem;
+  font-size: 2rem;
 }
 
 #discounts .mainBlock span:first-of-type {

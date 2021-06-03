@@ -6,12 +6,7 @@ function getColorName(colorId) {
     }
   }
 }
-function moveNextProductInfo() {
-  $("#scrollbarProductInfo").stop().animate({ scrollLeft: "+=565" }, 565);
-}
-function movePrevProductInfo() {
-  $("#scrollbarProductInfo").stop().animate({ scrollLeft: "-=565" }, 565);
-}
+
 $(document).ready(function () {
   //get product id from param
   var searchParams = new URLSearchParams(window.location.search);

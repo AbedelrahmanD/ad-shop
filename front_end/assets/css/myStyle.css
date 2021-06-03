@@ -143,12 +143,30 @@ nav ul li .material-icons {
   display: none;
 }
 
-#login {
-  min-width: 100px;
-}
-
 .material-icons:hover {
   cursor: pointer;
+}
+
+@-webkit-keyframes swingBag {
+  0% {
+    -webkit-transform: rotateZ(20deg);
+            transform: rotateZ(20deg);
+  }
+  100% {
+    -webkit-transform: rotateZ(-20deg);
+            transform: rotateZ(-20deg);
+  }
+}
+
+@keyframes swingBag {
+  0% {
+    -webkit-transform: rotateZ(20deg);
+            transform: rotateZ(20deg);
+  }
+  100% {
+    -webkit-transform: rotateZ(-20deg);
+            transform: rotateZ(-20deg);
+  }
 }
 
 #brandDiv {
@@ -167,6 +185,11 @@ nav ul li .material-icons {
           flex-direction: column;
   padding-left: 2rem;
   font-size: 2rem;
+}
+
+#brandDiv:hover .logoImage {
+  -webkit-animation: swingBag 0.7s infinite linear alternate;
+          animation: swingBag 0.7s infinite linear alternate;
 }
 
 #brandDiv span {
@@ -773,8 +796,8 @@ select {
 
 .searchContainer input {
   height: 100%;
-  border-top-left-radius: 100px;
-  border-bottom-left-radius: 100px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
   padding: 0px 1rem;
   margin: 0px;
   border: none;
@@ -786,7 +809,7 @@ select {
   width: 50%;
   -webkit-box-shadow: 1px 1px 5px gray;
           box-shadow: 1px 1px 5px gray;
-  min-width: 250px;
+  min-width: 200px;
 }
 
 .searchContainer input:focus {
@@ -798,8 +821,8 @@ select {
 .searchContainer button {
   height: 100%;
   outline: none;
-  border-top-right-radius: 100px;
-  border-bottom-right-radius: 100px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
   background-color: white;
   border: none;
   cursor: pointer;

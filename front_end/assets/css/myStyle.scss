@@ -104,12 +104,19 @@ nav {
 .menuToggle {
   display: none;
 }
-#login {
-  min-width: 100px;
-}
+
 .material-icons {
   &:hover {
     cursor: pointer;
+  }
+}
+@keyframes swingBag {
+  0% {
+    transform: rotateZ(20deg);
+  }
+
+  100% {
+    transform: rotateZ(-20deg);
   }
 }
 #brandDiv {
@@ -119,6 +126,11 @@ nav {
   flex-direction: column;
   padding-left: 2rem;
   font-size: 2rem;
+  &:hover {
+    .logoImage {
+      animation: swingBag 0.7s infinite linear alternate;
+    }
+  }
   span {
     color: $primary;
     font-weight: bold;
@@ -554,8 +566,8 @@ select {
   width: 70%;
   input {
     height: 100%;
-    border-top-left-radius: 100px;
-    border-bottom-left-radius: 100px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
     padding: 0px 1rem;
     margin: 0px;
     border: none;
@@ -565,7 +577,7 @@ select {
     font-weight: bold;
     width: 50%;
     box-shadow: 1px 1px 5px gray;
-    min-width: 250px;
+    min-width: 200px;
     &:focus {
       color: $primary;
       box-shadow: 1px 1px 7px grey;
@@ -574,8 +586,8 @@ select {
   button {
     height: 100%;
     outline: none;
-    border-top-right-radius: 100px;
-    border-bottom-right-radius: 100px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
     background-color: $secondary;
     border: none;
     cursor: pointer;

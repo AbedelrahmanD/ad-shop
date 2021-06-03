@@ -123,10 +123,6 @@
           justify-content: flex-start;
 }
 
-.demo .searchContainer input {
-  border-radius: 100px;
-}
-
 .searchOptionsContainer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -144,7 +140,15 @@
 
 .service table td,
 .service table th {
-  padding: 15px;
+  padding: 10px;
+}
+
+.service table th {
+  min-width: 70px;
+}
+
+.service table td {
+  min-width: 160px;
 }
 
 .resulrContainer {

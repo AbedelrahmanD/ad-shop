@@ -127,6 +127,16 @@ $(function () {
     }
   };
 
+  $(".carouselNextArrow").click(function () {
+    var sliderContainer = $(this).parent();
+    var slider = sliderContainer.find(".product_slider_carousel");
+    slider.stop().animate({ scrollLeft: "+=565" }, 500);
+  });
+  $(".carouselPrevArrow").click(function () {
+    var sliderContainer = $(this).parent();
+    var slider = sliderContainer.find(".product_slider_carousel");
+    slider.stop().animate({ scrollLeft: "-=565" }, 500);
+  });
   $(".toastContainer").click(function () {
     $(this).css({ transform: "translateY(99px)" });
   });
