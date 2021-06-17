@@ -35,6 +35,11 @@ p {
   color: #e5005a;
 }
 
+.material-icons {
+  font-size: 1.7rem;
+  fill: #e5005a;
+}
+
 #loadingScreen {
   position: fixed;
   background-color: white;
@@ -136,10 +141,11 @@ nav ul li a:hover::before {
 }
 
 nav ul li .material-icons {
-  color: #e5005a;
+  fill: #e5005a;
 }
 
-.menuToggle {
+.menuToggle,
+.menuClose {
   display: none;
 }
 
@@ -184,7 +190,10 @@ nav ul li .material-icons {
       -ms-flex-direction: column;
           flex-direction: column;
   padding-left: 2rem;
-  font-size: 2rem;
+}
+
+#brandDiv .logoImage {
+  font-size: 4rem;
 }
 
 #brandDiv:hover .logoImage {
@@ -324,12 +333,24 @@ nav ul li .material-icons {
   border-radius: 100px;
   width: 50px;
   height: 50px;
-  padding: 15px;
   background-color: white;
   -webkit-box-shadow: 1px 1px 5px grey;
           box-shadow: 1px 1px 5px grey;
   font-weight: bold;
   color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.carouselArrow svg {
+  font-size: 2rem;
 }
 
 .carouselArrow:focus {
@@ -337,7 +358,10 @@ nav ul li .material-icons {
   background-color: #e5005a;
   -webkit-box-shadow: 1px 1px 5px white;
           box-shadow: 1px 1px 5px white;
-  color: white;
+}
+
+.carouselArrow:focus svg {
+  fill: white;
 }
 
 .carouselNextArrow {
@@ -373,15 +397,13 @@ nav ul li .material-icons {
 }
 
 .productContainer .material-icons {
-  color: #e5005a;
+  fill: #e5005a;
   -webkit-transition: all 2s;
   transition: all 2s;
   opacity: 0;
   position: absolute;
   top: 5px;
   right: 5px;
-  background-color: white;
-  border-radius: 100px;
   padding: 5px;
 }
 
@@ -493,17 +515,22 @@ nav ul li .material-icons {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  gap: 0.5rem;
 }
 
-.footerImages {
-  cursor: pointer;
+.footerImagesContainer svg {
+  font-size: 4rem;
   -webkit-transition: all 1s;
   transition: all 1s;
+  cursor: pointer;
 }
 
-.footerImages:hover {
-  -webkit-transform: scale(0.9);
-          transform: scale(0.9);
+.footerImagesContainer svg:hover {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+  -webkit-box-shadow: 0px 5px 10px black;
+          box-shadow: 0px 5px 10px black;
+  border-radius: 8px;
 }
 
 .goTop {
@@ -580,7 +607,7 @@ nav ul li .material-icons {
 }
 
 .dropDownOption span:hover .material-icons {
-  color: white;
+  fill: white;
 }
 
 .dropDownOption a {
@@ -833,7 +860,7 @@ select {
 }
 
 .searchContainer button .material-icons {
-  color: #e5005a;
+  fill: #e5005a;
 }
 
 .searchContainer button:hover {
@@ -843,7 +870,39 @@ select {
 }
 
 .searchContainer button:hover .material-icons {
+  fill: white;
+}
+
+.btnIcon svg {
+  fill: white;
+}
+
+.btnIcon:hover svg {
+  fill: black;
+}
+
+.toastContainer {
+  -webkit-transform: translateY(99px);
+          transform: translateY(99px);
+  cursor: pointer;
+  -webkit-transition: all 1s cubic-bezier(0.21, -0.4, 0.44, 1.58);
+  transition: all 1s cubic-bezier(0.21, -0.4, 0.44, 1.58);
+  position: fixed;
+  bottom: 5px;
+  width: 100%;
+  -webkit-box-shadow: 1px 1px 5px grey;
+          box-shadow: 1px 1px 5px grey;
+  z-index: 50;
+}
+
+.Toast {
+  background-color: #e5005a;
+  font-weight: bold;
   color: white;
+  border-radius: 5px;
+  text-align: center;
+  padding: 15px;
+  width: 100%;
 }
 
 @media screen and (max-width: 768px) {
@@ -862,11 +921,15 @@ select {
     top: 1%;
     right: 5%;
     font-size: 50px;
-    color: #e5005a;
+    fill: #e5005a;
     -webkit-transition: all 1s;
     transition: all 1s;
   }
+  .menuClose {
+    display: none;
+  }
   nav {
+    min-height: 70px;
     max-width: unset;
     margin: unset;
     border-radius: 0px;
@@ -918,37 +981,14 @@ select {
   .textSlider h1 {
     font-size: 3rem;
   }
-}
-
-.toastContainer {
-  -webkit-transform: translateY(99px);
-          transform: translateY(99px);
-  cursor: pointer;
-  -webkit-transition: all 1s cubic-bezier(0.21, -0.4, 0.44, 1.58);
-  transition: all 1s cubic-bezier(0.21, -0.4, 0.44, 1.58);
-  position: fixed;
-  bottom: 5px;
-  width: 100%;
-  -webkit-box-shadow: 1px 1px 5px grey;
-          box-shadow: 1px 1px 5px grey;
-  z-index: 50;
-}
-
-.Toast {
-  background-color: #e5005a;
-  font-weight: bold;
-  color: white;
-  border-radius: 5px;
-  text-align: center;
-  padding: 15px;
-  width: 100%;
+  #cartIcon,
+  #cartNumber {
+    fill: white;
+    color: white;
+  }
 }
 
 @media screen and (max-width: 500px) {
-  #cartIcon,
-  #cartNumber {
-    color: white;
-  }
   .productReviewImageContainer {
     width: 100%;
   }

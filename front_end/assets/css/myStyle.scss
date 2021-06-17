@@ -25,6 +25,11 @@ p {
 #cartNumber {
   color: $primary;
 }
+.material-icons {
+  font-size: 1.7rem;
+  fill: $primary;
+}
+
 #loadingScreen {
   position: fixed;
   background-color: $secondary;
@@ -95,16 +100,16 @@ nav {
         }
       }
       .material-icons {
-        color: $primary;
+        fill: $primary;
       }
     }
   }
 }
 
-.menuToggle {
+.menuToggle,
+.menuClose {
   display: none;
 }
-
 .material-icons {
   &:hover {
     cursor: pointer;
@@ -125,7 +130,9 @@ nav {
   align-items: center;
   flex-direction: column;
   padding-left: 2rem;
-  font-size: 2rem;
+  .logoImage {
+    font-size: 4rem;
+  }
   &:hover {
     .logoImage {
       animation: swingBag 0.7s infinite linear alternate;
@@ -235,16 +242,23 @@ nav {
   border-radius: 100px;
   width: 50px;
   height: 50px;
-  padding: 15px;
   background-color: $secondary;
   box-shadow: 1px 1px 5px grey;
   font-weight: bold;
   color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  svg {
+    font-size: 2rem;
+  }
   &:focus {
     opacity: 1;
     background-color: $primary;
     box-shadow: 1px 1px 5px $secondary;
-    color: $secondary;
+    svg {
+      fill: $secondary;
+    }
   }
 }
 .carouselNextArrow {
@@ -271,14 +285,13 @@ nav {
   border-radius: 5px;
   transition: all 1s;
   .material-icons {
-    color: $primary;
+    fill: $primary;
     transition: all 2s;
     opacity: 0;
     position: absolute;
     top: 5px;
     right: 5px;
-    background-color: $secondary;
-    border-radius: 100px;
+
     padding: 5px;
   }
   &:hover {
@@ -360,14 +373,19 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.footerImages {
-  cursor: pointer;
-  transition: all 1s;
-  &:hover {
-    transform: scale(0.9);
+  gap: 0.5rem;
+  svg {
+    font-size: 4rem;
+    transition: all 1s;
+    cursor: pointer;
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0px 5px 10px black;
+      border-radius: 8px;
+    }
   }
 }
+
 .goTop {
   display: none;
   width: 20px;
@@ -422,7 +440,7 @@ nav {
       color: $secondary;
       background-color: $primary;
       .material-icons {
-        color: $secondary;
+        fill: $secondary;
       }
     }
   }
@@ -595,16 +613,45 @@ select {
     width: 10%;
     min-width: 50px;
     .material-icons {
-      color: $primary;
+      fill: $primary;
     }
     &:hover {
       box-shadow: 1px 1px 5px $textColor;
       background-color: $primary;
       .material-icons {
-        color: $secondary;
+        fill: $secondary;
       }
     }
   }
+}
+.btnIcon {
+  svg {
+    fill: $secondary;
+  }
+  &:hover {
+    svg {
+      fill: black;
+    }
+  }
+}
+.toastContainer {
+  transform: translateY(99px);
+  cursor: pointer;
+  transition: all 1s cubic-bezier(0.21, -0.4, 0.44, 1.58);
+  position: fixed;
+  bottom: 5px;
+  width: 100%;
+  box-shadow: 1px 1px 5px grey;
+  z-index: 50;
+}
+.Toast {
+  background-color: $primary;
+  font-weight: bold;
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+  padding: 15px;
+  width: 100%;
 }
 @media screen and (max-width: 768px) {
   .flexHE {
@@ -620,10 +667,14 @@ select {
     top: 1%;
     right: 5%;
     font-size: 50px;
-    color: $primary;
+    fill: $primary;
     transition: all 1s;
   }
+  .menuClose {
+    display: none;
+  }
   nav {
+    min-height: 70px;
     max-width: unset;
     margin: unset;
     border-radius: 0px;
@@ -667,32 +718,14 @@ select {
       font-size: 3rem;
     }
   }
-}
-.toastContainer {
-  transform: translateY(99px);
-  cursor: pointer;
-  transition: all 1s cubic-bezier(0.21, -0.4, 0.44, 1.58);
-  position: fixed;
-  bottom: 5px;
-  width: 100%;
-  box-shadow: 1px 1px 5px grey;
-  z-index: 50;
-}
-.Toast {
-  background-color: $primary;
-  font-weight: bold;
-  color: white;
-  border-radius: 5px;
-  text-align: center;
-  padding: 15px;
-  width: 100%;
+  #cartIcon,
+  #cartNumber {
+    fill: $secondary;
+    color: $secondary;
+  }
 }
 
 @media screen and (max-width: 500px) {
-  #cartIcon,
-  #cartNumber {
-    color: $secondary;
-  }
   .productReviewImageContainer {
     width: 100%;
   }

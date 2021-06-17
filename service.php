@@ -42,7 +42,10 @@
         <div class="clip">
             <input type="text" id="serviceUrl" value="http://localhost/web_project/back_end/service/service.php" />
             <span id="copy" class="material-icons">
-                content_copy
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 36 36">
+                    <path d="M29.5 7h-19A1.5 1.5 0 0 0 9 8.5v24a1.5 1.5 0 0 0 1.5 1.5h19a1.5 1.5 0 0 0 1.5-1.5v-24A1.5 1.5 0 0 0 29.5 7zM29 32H11V9h18z" class="clr-i-outline clr-i-outline-path-1" fill="white" />
+                    <path d="M26 3.5A1.5 1.5 0 0 0 24.5 2h-19A1.5 1.5 0 0 0 4 3.5v24A1.5 1.5 0 0 0 5.5 29H6V4h20z" class="clr-i-outline clr-i-outline-path-2" fill="white" />
+                </svg>
             </span>
         </div>
     </div>
@@ -86,8 +89,10 @@
                 <input id="limitValue" type="number" placeholder="limit" />
             </div>
             <div class="sliderBtns">
-                <a id="searchType" class="btn1">
-                    <span class="material-icons">search</span>
+                <a id="searchType" class="btn1 btnIcon">
+                    <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                        <path d="M10 18a7.952 7.952 0 0 0 4.897-1.688l4.396 4.396l1.414-1.414l-4.396-4.396A7.952 7.952 0 0 0 18 10c0-4.411-3.589-8-8-8s-8 3.589-8 8s3.589 8 8 8zm0-14c3.309 0 6 2.691 6 6s-2.691 6-6 6s-6-2.691-6-6s2.691-6 6-6z" />
+                    </svg>
                 </a>
             </div>
         </div>

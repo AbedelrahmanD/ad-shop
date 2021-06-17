@@ -96,6 +96,7 @@
     border-bottom: 5px solid $primary;
     margin-top: 2rem;
     margin-bottom: 1rem;
+    font-size: 3rem;
   }
 }
 #similar.target {
@@ -129,6 +130,11 @@
 }
 
 @media screen and (max-width: 500px) {
+  .similarProducts {
+    h2 {
+      font-size: 2rem;
+    }
+  }
   #similar {
     align-items: center;
     flex-direction: column;

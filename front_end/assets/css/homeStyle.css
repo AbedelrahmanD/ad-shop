@@ -91,7 +91,7 @@
   bottom: 1px;
   right: 1px;
   background-color: #e5005a;
-  color: white;
+  fill: white;
   border-radius: 100px;
 }
 
@@ -179,7 +179,8 @@
 
 .titleWraper h1 {
   border-bottom: 3px solid #e5005a;
-  margin-bottom: 2rem;
+  font-weight: bold;
+  color: #e5005a;
   font-size: 2rem;
 }
 
