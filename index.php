@@ -127,7 +127,7 @@
                     </svg>
                 </button>
 
-                <div id="scrollbarDiscount" class="product_slider_carousel discountTarget">
+                <div id="scrollbarDiscount" class="productSliderCarousel discountTarget">
                 </div>
                 <div class="sliderBtnFullContainer">
                     <div class="sliderBtns">
@@ -159,7 +159,7 @@
                     </svg>
                 </button>
 
-                <div id="scrollbarMen" class="product_slider_carousel menTarget">
+                <div id="scrollbarMen" class="productSliderCarousel menTarget">
                 </div>
                 <div class="sliderBtnFullContainer">
                     <div class="sliderBtns">
@@ -194,7 +194,7 @@
                     </svg>
                 </button>
 
-                <div id="scrollbarWomen" class="product_slider_carousel womenTarget">
+                <div id="scrollbarWomen" class="productSliderCarousel womenTarget">
                 </div>
                 <div class="sliderBtnFullContainer">
                     <div class="sliderBtns">
@@ -228,7 +228,7 @@
                     </svg>
                 </button>
 
-                <div id="scrollbarKids" class="product_slider_carousel kidsTarget">
+                <div id="scrollbarKids" class="productSliderCarousel kidsTarget">
                 </div>
                 <div class="sliderBtnFullContainer">
                     <div class="sliderBtns">

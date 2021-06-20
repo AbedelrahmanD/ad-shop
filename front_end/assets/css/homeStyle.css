@@ -28,7 +28,7 @@
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 
 .sliderContents {
@@ -41,11 +41,11 @@
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   padding: 2rem;
 }
 
@@ -69,7 +69,7 @@
   margin: 2rem auto;
   border-radius: 5px;
   -webkit-box-shadow: 1px 1px 5px grey;
-          box-shadow: 1px 1px 5px grey;
+  box-shadow: 1px 1px 5px grey;
   background-color: white;
   padding: 1rem;
   display: -webkit-box;
@@ -83,7 +83,7 @@
 
 .productReview:hover {
   -webkit-box-shadow: 1px 1px 20px grey;
-          box-shadow: 1px 1px 20px grey;
+  box-shadow: 1px 1px 20px grey;
 }
 
 .productReview .material-icons {
@@ -99,12 +99,12 @@
   width: 40%;
   height: 300px;
   -ms-flex-negative: 0;
-      flex-shrink: 0;
+  flex-shrink: 0;
 }
 
 .productReviewImageContainer img {
   -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   width: 100%;
   height: 100%;
   border-radius: 5px;
@@ -130,14 +130,14 @@
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding: 5rem 1rem;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
@@ -165,7 +165,7 @@
 
 .viewSection:hover {
   -webkit-box-shadow: 1px 1px 5px grey;
-          box-shadow: 1px 1px 5px grey;
+  box-shadow: 1px 1px 5px grey;
 }
 
 .titleWraper {
@@ -173,8 +173,8 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .titleWraper h1 {
@@ -207,7 +207,7 @@
   .join h3 {
     font-size: 2rem;
   }
-  .product_slider_carousel {
+  .productSliderCarousel {
     overflow: auto;
   }
 }

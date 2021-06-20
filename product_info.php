@@ -27,7 +27,7 @@
                     </svg>
                 </button>
 
-                <div id="scrollbarProductInfo" class="product_slider_carousel ProductInfoTarget">
+                <div id="scrollbarProductInfo" class="productSliderCarousel ProductInfoTarget">
                 </div>
 
             </section>
@@ -70,7 +70,7 @@
             Similar Products
         </h2>
     </div>
-    <div id="similar" class="product_slider_carousel target"></div>
+    <div id="similar" class="productSliderCarousel target"></div>
 </section>
 <div class="modalContainerBlock">
     <div class="modalView">

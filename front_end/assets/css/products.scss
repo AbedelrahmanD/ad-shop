@@ -21,6 +21,41 @@
   padding: 15px;
   justify-content: space-around;
 }
+.searchContainer {
+  max-width: 1140px;
+  display: flex;
+  justify-content: center;
+  height: 50px;
+  width: 70%;
+  .inputForm {
+    border-radius: 0px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+  button {
+    height: 100%;
+    outline: none;
+    border-radius: 0px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: $secondary;
+    border: none;
+    cursor: pointer;
+    transition: all 1s;
+    width: 10%;
+    min-width: 50px;
+    .material-icons {
+      fill: $primary;
+    }
+    &:hover {
+      box-shadow: 1px 1px 5px $textColor;
+      background-color: $primary;
+      .material-icons {
+        fill: $secondary;
+      }
+    }
+  }
+}
 .advancedSearch {
   margin-top: 10px;
   margin-bottom: 10px;

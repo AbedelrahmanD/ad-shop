@@ -18,38 +18,11 @@ body {
 p {
   line-height: 1.5;
 }
-.bodyMain {
-  overflow: hidden;
-  padding-bottom: 10px;
-}
-#cartNumber {
-  color: $primary;
-}
-.material-icons {
-  font-size: 1.7rem;
-  fill: $primary;
-}
-
-#loadingScreen {
-  position: fixed;
-  background-color: $secondary;
-  width: 100%;
-  height: 100%;
-  z-index: 9999;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  img {
-    width: 70%;
-    height: 70%;
-    object-fit: contain;
-  }
-}
 a {
   text-decoration: none;
   color: black;
 }
+
 nav {
   box-shadow: 1px 1px 5px gray;
   max-width: 1340px;
@@ -89,7 +62,7 @@ nav {
           width: 0px;
           bottom: 0;
           z-index: -1;
-          transition: all 0.5s;
+          transition: all 0.5s cubic-bezier(0.21, -0.29, 0.63, 1.61);
         }
         &:hover {
           &::before {
@@ -103,6 +76,34 @@ nav {
         fill: $primary;
       }
     }
+  }
+}
+.bodyMain {
+  overflow: hidden;
+  padding-bottom: 10px;
+}
+#cartNumber {
+  color: $primary;
+}
+.material-icons {
+  font-size: 1.7rem;
+  fill: $primary;
+}
+
+#loadingScreen {
+  position: fixed;
+  background-color: $secondary;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 70%;
+    height: 70%;
+    object-fit: contain;
   }
 }
 
@@ -144,20 +145,20 @@ nav {
   }
 }
 
-.overLay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100vh;
-  background-color: black;
-  opacity: 0.5;
-  display: flex;
-  justify-content: center;
-  z-index: 5;
-}
+// .overLay {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   right: 0;
+//   bottom: 0;
+//   width: 100%;
+//   height: 100vh;
+//   background-color: black;
+//   opacity: 0.5;
+//   display: flex;
+//   justify-content: center;
+//   z-index: 5;
+// }
 .sliderBtns {
   width: 200px;
   display: flex;
@@ -267,7 +268,7 @@ nav {
 .carouselPrevArrow {
   left: 1px;
 }
-.product_slider_carousel {
+.productSliderCarousel {
   display: flex;
   gap: 3rem;
   overflow: hidden;
@@ -576,52 +577,22 @@ select {
   align-items: center;
   gap: 5px;
 }
-.searchContainer {
-  max-width: 1140px;
-  display: flex;
-  justify-content: center;
+.inputForm {
   height: 50px;
-  width: 70%;
-  input {
-    height: 100%;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-    padding: 0px 1rem;
-    margin: 0px;
-    border: none;
-    outline: none;
-    transition: all 1s;
-    font-size: 1.2rem;
-    font-weight: bold;
-    width: 50%;
-    box-shadow: 1px 1px 5px gray;
-    min-width: 200px;
-    &:focus {
-      color: $primary;
-      box-shadow: 1px 1px 7px grey;
-    }
-  }
-  button {
-    height: 100%;
-    outline: none;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-    background-color: $secondary;
-    border: none;
-    cursor: pointer;
-    transition: all 1s;
-    width: 10%;
-    min-width: 50px;
-    .material-icons {
-      fill: $primary;
-    }
-    &:hover {
-      box-shadow: 1px 1px 5px $textColor;
-      background-color: $primary;
-      .material-icons {
-        fill: $secondary;
-      }
-    }
+  border-radius: 5px;
+  padding: 0px 1rem;
+  margin: 0px;
+  border: none;
+  outline: none;
+  transition: all 1s;
+  font-size: 1.2rem;
+  font-weight: bold;
+  width: 50%;
+  box-shadow: 1px 1px 5px gray;
+  min-width: 200px;
+  &:focus {
+    color: $primary;
+    box-shadow: 1px 1px 7px grey;
   }
 }
 .btnIcon {
@@ -657,7 +628,7 @@ select {
   .flexHE {
     justify-content: center;
   }
-  .product_slider_carousel {
+  .productSliderCarousel {
     overflow: auto;
   }
   .menuToggle {

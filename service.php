@@ -82,12 +82,12 @@
             Demo
         </h1>
         <div class="searchOptionsContainer">
-            <div class="searchContainer">
-                <input id="searchTypeValue" type="text" placeholder="Search Type" />
-            </div>
-            <div class="searchContainer">
-                <input id="limitValue" type="number" placeholder="limit" />
-            </div>
+
+            <input id="searchTypeValue" class="inputForm" type="text" placeholder="Search Type" />
+
+
+            <input id="limitValue" class="inputForm" type="number" placeholder="limit" />
+
             <div class="sliderBtns">
                 <a id="searchType" class="btn1 btnIcon">
                     <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
