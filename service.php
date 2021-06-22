@@ -86,7 +86,7 @@
             <input id="searchTypeValue" class="inputForm" type="text" placeholder="Search Type" />
 
 
-            <input id="limitValue" class="inputForm" type="number" placeholder="limit" />
+            <input id="limitValue" class="inputForm" type="text" placeholder="limit" />
 
             <div class="sliderBtns">
                 <a id="searchType" class="btn1 btnIcon">

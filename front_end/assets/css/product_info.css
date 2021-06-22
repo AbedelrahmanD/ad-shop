@@ -14,11 +14,11 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 1rem;
 }
 
@@ -30,7 +30,7 @@
   gap: 3rem;
   padding: 10px;
   -webkit-box-shadow: 1px 1px 5px grey;
-  box-shadow: 1px 1px 5px grey;
+          box-shadow: 1px 1px 5px grey;
 }
 
 .product .colorPicker {
@@ -55,11 +55,11 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 1rem;
 }
 
@@ -78,8 +78,8 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   border-radius: 5px;
   -webkit-transition: all 1s;
   transition: all 1s;
@@ -87,14 +87,14 @@
 
 .product .productImageContainr:hover {
   -webkit-box-shadow: 1px 1px 5px grey;
-  box-shadow: 1px 1px 5px grey;
+          box-shadow: 1px 1px 5px grey;
 }
 
 .product .productImageContainr img {
   width: 500px;
   height: 350px;
   -o-object-fit: contain;
-  object-fit: contain;
+     object-fit: contain;
   border-radius: 5px;
 }
 
@@ -121,7 +121,7 @@
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
-  object-fit: contain;
+     object-fit: contain;
   border-radius: 5px;
 }
 
@@ -145,18 +145,18 @@
 
 #similar.target:hover {
   -webkit-box-shadow: 1px 1px 5px grey;
-  box-shadow: 1px 1px 5px grey;
+          box-shadow: 1px 1px 5px grey;
   border-radius: 5px;
 }
 
 #similar {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(280px, 280px)) [auto-fit];
-  grid-template-columns: repeat(auto-fit, minmax(280px, 280px));
+  -ms-grid-columns: (minmax(280px, 280px))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(280px, 280px));
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   overflow-x: hidden;
 }
 
@@ -167,11 +167,11 @@
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
@@ -179,8 +179,8 @@
   .product {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
     margin: 10px;
   }
 }
@@ -191,12 +191,12 @@
   }
   #similar {
     -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .product .productImageContainr img {
     width: 280px;
@@ -205,8 +205,8 @@
   .product {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
     margin: 10px;
   }
 }

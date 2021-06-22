@@ -4,7 +4,6 @@
 
 3) What I used:
     dependencies: jquery,jquery ui,aos
-    icons:material icons
     font-family:opan sans
     images: from amazon and undraw
     ajax:fetch data from server

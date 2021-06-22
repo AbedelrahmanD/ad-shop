@@ -33,7 +33,7 @@ a {
 
 nav {
   -webkit-box-shadow: 1px 1px 5px gray;
-  box-shadow: 1px 1px 5px gray;
+          box-shadow: 1px 1px 5px gray;
   max-width: 1340px;
   margin: auto;
   margin-top: auto;
@@ -47,8 +47,8 @@ nav {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   color: white;
   background-color: white;
   z-index: 500;
@@ -69,11 +69,11 @@ nav ul li {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
@@ -130,18 +130,18 @@ nav ul li .material-icons {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #loadingScreen img {
   width: 70%;
   height: 70%;
   -o-object-fit: contain;
-  object-fit: contain;
+     object-fit: contain;
 }
 
 .menuToggle,
@@ -156,22 +156,22 @@ nav ul li .material-icons {
 @-webkit-keyframes swingBag {
   0% {
     -webkit-transform: rotateZ(20deg);
-    transform: rotateZ(20deg);
+            transform: rotateZ(20deg);
   }
   100% {
     -webkit-transform: rotateZ(-20deg);
-    transform: rotateZ(-20deg);
+            transform: rotateZ(-20deg);
   }
 }
 
 @keyframes swingBag {
   0% {
     -webkit-transform: rotateZ(20deg);
-    transform: rotateZ(20deg);
+            transform: rotateZ(20deg);
   }
   100% {
     -webkit-transform: rotateZ(-20deg);
-    transform: rotateZ(-20deg);
+            transform: rotateZ(-20deg);
   }
 }
 
@@ -180,15 +180,15 @@ nav ul li .material-icons {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   padding-left: 2rem;
 }
 
@@ -198,7 +198,7 @@ nav ul li .material-icons {
 
 #brandDiv:hover .logoImage {
   -webkit-animation: swingBag 0.7s infinite linear alternate;
-  animation: swingBag 0.7s infinite linear alternate;
+          animation: swingBag 0.7s infinite linear alternate;
 }
 
 #brandDiv span {
@@ -212,8 +212,8 @@ nav ul li .material-icons {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .sliderBtns a {
@@ -221,11 +221,11 @@ nav ul li .material-icons {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: center;
   padding: 15px;
   font-weight: bold;
@@ -235,7 +235,7 @@ nav ul li .material-icons {
   position: relative;
   border: 0px;
   -webkit-box-shadow: 1px 1px 5px grey;
-  box-shadow: 1px 1px 5px grey;
+          box-shadow: 1px 1px 5px grey;
   border-radius: 100px;
   z-index: 1;
 }
@@ -301,8 +301,8 @@ nav ul li .material-icons {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .carouselArrow {
@@ -316,18 +316,18 @@ nav ul li .material-icons {
   height: 50px;
   background-color: white;
   -webkit-box-shadow: 1px 1px 5px grey;
-  box-shadow: 1px 1px 5px grey;
+          box-shadow: 1px 1px 5px grey;
   font-weight: bold;
   color: black;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .carouselArrow svg {
@@ -338,7 +338,7 @@ nav ul li .material-icons {
   opacity: 1;
   background-color: #e5005a;
   -webkit-box-shadow: 1px 1px 5px white;
-  box-shadow: 1px 1px 5px white;
+          box-shadow: 1px 1px 5px white;
 }
 
 .carouselArrow:focus svg {
@@ -364,13 +364,13 @@ nav ul li .material-icons {
 
 .productContainer {
   -ms-flex-negative: 0;
-  flex-shrink: 0;
+      flex-shrink: 0;
   background-color: white;
   cursor: pointer;
   width: 280px;
   height: 300px;
   -webkit-box-shadow: 1px 1px 5px grey;
-  box-shadow: 1px 1px 5px grey;
+          box-shadow: 1px 1px 5px grey;
   position: relative;
   border-radius: 5px;
   -webkit-transition: all 1s;
@@ -390,14 +390,14 @@ nav ul li .material-icons {
 
 .productContainer:hover {
   -webkit-box-shadow: 1px 1px 15px #e5005a;
-  box-shadow: 1px 1px 15px #e5005a;
+          box-shadow: 1px 1px 15px #e5005a;
 }
 
 .productContainer:hover .productImageContainer {
   top: 0px;
   left: 0px;
   -webkit-box-shadow: 1px 1px 5px grey;
-  box-shadow: 1px 1px 5px grey;
+          box-shadow: 1px 1px 5px grey;
   width: 280px;
 }
 
@@ -412,7 +412,7 @@ nav ul li .material-icons {
   position: absolute;
   border-radius: 5px;
   -webkit-box-shadow: 1px 1px 12px grey;
-  box-shadow: 1px 1px 12px grey;
+          box-shadow: 1px 1px 12px grey;
   top: -7px;
   left: -10px;
   right: 0px;
@@ -426,7 +426,7 @@ nav ul li .material-icons {
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
-  object-fit: contain;
+     object-fit: contain;
 }
 
 .productTextContainer {
@@ -467,14 +467,14 @@ nav ul li .material-icons {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #footer h3,
@@ -491,11 +491,11 @@ nav ul li .material-icons {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 0.5rem;
 }
 
@@ -508,9 +508,9 @@ nav ul li .material-icons {
 
 .footerImagesContainer svg:hover {
   -webkit-transform: translateY(-5px);
-  transform: translateY(-5px);
+          transform: translateY(-5px);
   -webkit-box-shadow: 0px 5px 10px black;
-  box-shadow: 0px 5px 10px black;
+          box-shadow: 0px 5px 10px black;
   border-radius: 8px;
 }
 
@@ -522,7 +522,7 @@ nav ul li .material-icons {
   padding: 20px;
   background-color: white;
   -webkit-box-shadow: 1px 1px 5px grey;
-  box-shadow: 1px 1px 5px grey;
+          box-shadow: 1px 1px 5px grey;
   color: #e5005a;
   position: fixed;
   bottom: 2%;
@@ -558,14 +558,14 @@ nav ul li .material-icons {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   background-color: white;
   height: 0px;
   overflow: hidden;
   opacity: 0;
   -webkit-box-shadow: 1px 1px 5px gray;
-  box-shadow: 1px 1px 5px gray;
+          box-shadow: 1px 1px 5px gray;
   border-radius: 7px;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
@@ -578,8 +578,8 @@ nav ul li .material-icons {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .dropDownOption span:hover {
@@ -610,8 +610,8 @@ nav ul li .material-icons {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .flexV {
@@ -619,12 +619,12 @@ nav ul li .material-icons {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .modalContainerBlock {
@@ -642,11 +642,11 @@ nav ul li .material-icons {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .modalView .modalViewImageContainer {
@@ -658,7 +658,7 @@ nav ul li .material-icons {
   width: 100%;
   height: 100%;
   -o-object-fit: contain;
-  object-fit: contain;
+     object-fit: contain;
 }
 
 .modalView .modalViewClose {
@@ -675,23 +675,13 @@ nav ul li .material-icons {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 0;
   cursor: pointer;
-}
-
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-input[type="number"] {
-  -moz-appearance: textfield;
 }
 
 .customInputNumber {
@@ -699,11 +689,11 @@ input[type="number"] {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .customInputNumber .quantityNumber {
@@ -719,21 +709,21 @@ input[type="number"] {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 0px;
   border-radius: 100px;
   -webkit-box-shadow: 1px 1px 5px grey;
-  box-shadow: 1px 1px 5px grey;
+          box-shadow: 1px 1px 5px grey;
   font-weight: bold;
 }
 
 .customInputNumber .numberAction:hover {
   -webkit-box-shadow: 1px 1px 10px #e5005a;
-  box-shadow: 1px 1px 10px #e5005a;
+          box-shadow: 1px 1px 10px #e5005a;
 }
 
 select {
@@ -751,7 +741,7 @@ select {
   padding: 1rem;
   border: none;
   -webkit-box-shadow: 1px 1px 5px gray;
-  box-shadow: 1px 1px 5px gray;
+          box-shadow: 1px 1px 5px gray;
 }
 
 .colorPicker option {
@@ -776,17 +766,17 @@ select {
 
 .flexHE {
   -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .flexHC {
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 5px;
 }
 
@@ -803,14 +793,14 @@ select {
   font-weight: bold;
   width: 50%;
   -webkit-box-shadow: 1px 1px 5px gray;
-  box-shadow: 1px 1px 5px gray;
+          box-shadow: 1px 1px 5px gray;
   min-width: 200px;
 }
 
 .inputForm:focus {
   color: #e5005a;
   -webkit-box-shadow: 1px 1px 7px grey;
-  box-shadow: 1px 1px 7px grey;
+          box-shadow: 1px 1px 7px grey;
 }
 
 .btnIcon svg {
@@ -823,7 +813,7 @@ select {
 
 .toastContainer {
   -webkit-transform: translateY(99px);
-  transform: translateY(99px);
+          transform: translateY(99px);
   cursor: pointer;
   -webkit-transition: all 1s cubic-bezier(0.21, -0.4, 0.44, 1.58);
   transition: all 1s cubic-bezier(0.21, -0.4, 0.44, 1.58);
@@ -831,7 +821,7 @@ select {
   bottom: 5px;
   width: 100%;
   -webkit-box-shadow: 1px 1px 5px grey;
-  box-shadow: 1px 1px 5px grey;
+          box-shadow: 1px 1px 5px grey;
   z-index: 50;
 }
 
@@ -848,8 +838,8 @@ select {
 @media screen and (max-width: 768px) {
   .flexHE {
     -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .productSliderCarousel {
     overflow: auto;
@@ -889,19 +879,19 @@ select {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -webkit-transition: all 1s;
     transition: all 1s;
     -webkit-transform: translateX(800px);
-    transform: translateX(800px);
+            transform: translateX(800px);
   }
   nav ul li a {
     color: white;
   }
   .showMenu {
     -webkit-transform: translateX(0px);
-    transform: translateX(0px);
+            transform: translateX(0px);
   }
   #footer {
     margin-top: 30%;
@@ -912,8 +902,8 @@ select {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .txtSlider .btnBlock {
     width: 90%;
@@ -935,8 +925,8 @@ select {
   .productReview {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
     width: 85%;
     margin: auto;
   }
@@ -946,7 +936,7 @@ select {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
-    -ms-flex-direction: column-reverse;
-    flex-direction: column-reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
   }
 }
